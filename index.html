@@ -190,12 +190,12 @@ $(function () {
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
         // スマートフォン
         $(function() {
-    		$("#dropdown").tap(function (){
+    		$("#dropdown").click(function (){
         	$("#nav_wrapper").addClass("is-visible");
         	return false;
     	});
 
-    	$("#nav_close").tap(function (){
+    	$("#nav_close").click(function (){
         	$("#nav_wrapper").removeClass("is-visible");
         	return false;
     		});
