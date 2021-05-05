@@ -409,7 +409,7 @@ nav#global_nav {
   visibility: visible; }
   nav#global_nav a {
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.5); }
+    //background: rgba(255, 255, 255, 0.5); }
   nav#global_nav ul {
     font-size: .9em;
     letter-spacing: .2em;
