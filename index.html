@@ -192,11 +192,11 @@ $(function () {
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
         // スマートフォン
 
-$(document).on('click', '#dropdown', function(){
+        $(function() {
     		$("#dropdown").click(function (){
         	$("#nav_wrapper").addClass("is-visible");
         	return false;
-});
+    	});
 
 
     	$("#nav_close").click(function (){
@@ -342,6 +342,7 @@ nav#gallery_nav {
     padding-top:2vh;
 }
 @media all and (max-width: 768px) {
+	body,.lightboxOverlay{overflow:hidden;}
     .flexslider {padding-top:0vh;}
     nav#gallery_nav {
     background-color: white;
