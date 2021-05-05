@@ -26,7 +26,7 @@ $(document).ready(function(){
             for(i = 1; i <= gallery_num_array[id]; i++){
                 if(i < 10) {k = "00"+i;} else {k = "0"+i;}
                 myhtml += 
-                    '<li data-original="sample/'+gallery_id_array[id]+'/'+k+'.jpg" class="lazy g'+id+'"><a href="sample/'+gallery_id_array[id]+'/'+k+'.jpg" data-lity></a>'+
+                    '<li data-original="sample/'+gallery_id_array[id]+'/'+k+'.jpg" class="lazy g'+id+'"><a href="sample/'+gallery_id_array[id]+'/'+k+'.jpg" data-lightbox="lgb"></a>'+
                     '</li>'  //
             }
             myhtml += '</ul></div>';
