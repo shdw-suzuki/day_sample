@@ -189,11 +189,13 @@ $(function () {
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
         // スマートフォン
-        $(function() {
+
+$(document).on('click', '#dropdown', function(){
     		$("#dropdown").click(function (){
         	$("#nav_wrapper").addClass("is-visible");
         	return false;
-    	});
+});
+
 
     	$("#nav_close").click(function (){
         	$("#nav_wrapper").removeClass("is-visible");
