@@ -178,44 +178,6 @@
         </div>
    </div>
 
-<script>
-	$(function() {
-	$("#dropdown").hover(function() {
-	$("#dropdown-menu").slideToggle();
-	}, function() {
-	$("#dropdown-menu").hide();
-	});
-	});
-
-$(function () {
-    const ua = navigator.userAgent;
-    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
-        // スマートフォン
-
-        $(function() {
-    		$("#dropdown").click(function (){
-        	$("#nav_wrapper").addClass("is-visible");
-        	return false;
-    	});
-
-
-    	$("#nav_close").click(function (){
-        	$("#nav_wrapper").removeClass("is-visible");
-        	return false;
-    		});
-	});
-
-    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
-        // タブレット
-    } else {
-        // PC
-	$("#dropdown").css("background","rgba(0, 0, 0, 0)")
-    }
-})
-
-
-</script>
-
 <style>
 .lightboxOverlay {
     background-color: white;
