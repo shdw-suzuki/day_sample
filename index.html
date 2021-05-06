@@ -40,9 +40,9 @@
     <script type="text/javascript" src="js/lity.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" type="text/javascript"></script>
 </head>
    
 <body class="opening" style="opacity: 1;">
@@ -177,7 +177,15 @@
             <footer id="footer"><a href="">c YUICHI NOGUCHI</a></footer>
         </div>
    </div>
-
+<script>
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true,
+  'disableScrolling': true,
+  'fitImagesInViewport': true,
+  'showImageNumberLabel': false
+})
+</script>
 <style>
 .lightboxOverlay {
     background-color: white;
@@ -303,6 +311,7 @@ nav#gallery_nav {
     color:white;
     padding-top:2vh;
 }
+
 @media all and (max-width: 768px) {
     .lightboxOverlay{overflow:hidden;}
     .flexslider {padding-top:0vh;}
@@ -318,6 +327,29 @@ nav#gallery_nav {
 div#portfolio {background: rgba(255, 255, 255, 0.5);}
 .opening div#portfolio,.opening nav#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
 nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
+}
+
+@media all and (min-width: 768px) {
+.lb-nav a.lb-prev {
+  width: 40%;
+  position: fixed;
+  left: 50px;
+  top: 10px;
+} 
+
+.lb-nav a.lb-next {
+  width: 40%;
+  position: fixed;
+  right: 50px;
+  top: 10px;
+}
+.lb-data .lb-close{
+  width: 40%;
+  position: fixed;
+  right: 50px;
+  top: 10px;
+  z-index:100;
+}
 }
 </style>
 </body></html>
