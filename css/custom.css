@@ -2,15 +2,7 @@
 /* CSS Document */
 /*def end*/
 /*share*/
-::selection {
-  background: rgba(255, 255, 255, 0.6);
-  /* Safari */
-  color: #00141e; }
 
-::-moz-selection {
-  background: rgba(255, 255, 255, 0.6);
-  /* Firefox */
-  color: #00141e; }
 
 html, body {
   height: 100%; }
