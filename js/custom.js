@@ -263,23 +263,20 @@ $(function () {
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
         // スマートフォン
-
+    var $nav = $('#nav_wrapper');
 	$('#dropdown').click(function (){
-        	$('#nav_wrapper').addClass('is-visible');
-        	return false;
+        	$nav.addClass('is-visible');
     	});
 
 
     	$('#nav_close').click(function (){
-        	$('#nav_wrapper').removeClass('is-visible');
-        	return false;
+        	$nav.removeClass('is-visible');
 	});
 
     } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
         // タブレット
     } else {
         // PC
-	$('#dropdown').css('background','rgba(0, 0, 0, 0)');
     };
 });
 
