@@ -252,7 +252,7 @@ $(function() {
 });
 
 $(function() {
-	$('#dropdown').hover(function() {
+	$('.dropdown').hover(function() {
 	$('#dropdown-menu').slideToggle();
 	}, function() {
 	$('#dropdown-menu').hide();
