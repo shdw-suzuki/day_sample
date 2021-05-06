@@ -113,18 +113,6 @@ $(document).ready(function(){
     };
 
 
-$(function () {
-    const ua = navigator.userAgent;
-    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
-        // スマートフォン
-
-    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
-        // タブレット
-    } else {
-        // PC
-    }
-})
-
      
     //    gallery_load("gn_1", "advertisement");
 
@@ -261,6 +249,38 @@ $(function() {
                }
           ]
      });
+});
+
+$(function() {
+	$('#dropdown').hover(function() {
+	$('#dropdown-menu').slideToggle();
+	}, function() {
+	$('#dropdown-menu').hide();
+	});
+});
+
+$(function () {
+    const ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
+        // スマートフォン
+
+	$('#dropdown').click(function (){
+        	$('#nav_wrapper').addClass('is-visible');
+        	return false;
+    	});
+
+
+    	$('#nav_close').click(function (){
+        	$('#nav_wrapper').removeClass('is-visible');
+        	return false;
+	});
+
+    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
+        // タブレット
+    } else {
+        // PC
+	$('#dropdown').css('background','rgba(0, 0, 0, 0)');
+    };
 });
 
 
