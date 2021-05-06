@@ -251,13 +251,7 @@ $(function() {
      });
 });
 
-$(function() {
-	$('.dropdown').hover(function() {
-	$('#dropdown-menu').slideToggle();
-	}, function() {
-	$('#dropdown-menu').hide();
-	});
-});
+
 
 $(function () {
     const ua = navigator.userAgent;
@@ -275,8 +269,22 @@ $(function () {
 
     } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
         // タブレット
+	$(function() {
+	$('.dropdown').hover(function() {
+	$('#dropdown-menu').slideToggle();
+	}, function() {
+	$('#dropdown-menu').hide();
+	});
+	});
     } else {
         // PC
+	$(function() {
+	$('.dropdown').hover(function() {
+	$('#dropdown-menu').slideToggle();
+	}, function() {
+	$('#dropdown-menu').hide();
+	});
+	});
     };
 });
 
