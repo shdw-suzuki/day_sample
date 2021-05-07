@@ -148,7 +148,7 @@
             </header>
             <nav id="global_nav" class="">
                 <ul>
-		　　<li class="dropdown"><a id="dropdown">　portfolio /  </a>
+		　　<li class="dropdown"><a id="dropdown">portfolio /</a>
                     	<ul id="dropdown-menu" style="display:none;">
                     		<div id="navtop"></div>
             	<nav id="gallery_nav">
@@ -166,8 +166,8 @@
                     	</ul>
                     </li>
 
-                    <li><a id="profile_btn">about  /</a></li>
-                    <li><a href="mailto:">contact　</a></li>
+                    <li><a id="profile_btn">about /</a></li>
+                    <li><a href="mailto:">contact</a></li>
                 </ul>
             </nav>
         </section>
@@ -330,6 +330,37 @@ nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
 
 .lb-nav a.lb-prev:hover,.lb-nav a.lb-next:hover{opacity:0.6;width: 20%;}
 .lb-nav a.lb-prev,.lb-nav a.lb-next{width: 20%;}
+
+.lb-nav a.lb-prev {
+  width: 100px;
+  position: fixed;
+  float:left;
+  left:0px;
+  top: 90vh;
+  opacity:1;
+  background: url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/prev.png) no-repeat;
+  background-size: 35px;
+} 
+
+.lb-nav a.lb-next {
+  width: 100px;
+  position: fixed;
+  float:left;
+  left: 100px;
+  top: 90vh;
+  opacity:1;
+  background: url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/next.png) no-repeat;
+  background-size: 35px;
+
+}
+.lb-data .lb-close{
+  z-index:100;
+  position: fixed;
+  float:right;
+  right: 20px;
+  bottom: 5vh;
+}
+
 }
 
 
