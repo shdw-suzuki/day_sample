@@ -13,8 +13,7 @@ html, body {
 a {
   text-decoration: none;
   color: #00141e; }
-  a:hover {
-    text-decoration: underline; }
+  a:hover { }
 
 li {
   list-style-type: none; }
@@ -435,8 +434,6 @@ nav#global_nav {
       top: auto;
       position: fixed;
       letter-spacing: 0; }
-      nav#global_nav ul li {
-        margin-right: 0; }
         nav#global_nav ul li:after {
           margin-left: 0; }
       nav#global_nav span {
