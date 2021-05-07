@@ -408,8 +408,7 @@ nav#global_nav {
     padding: 0;
     margin: 0; }
     nav#global_nav ul li {
-      float: left;
-      margin-right: .5em; }
+      float: left;}
       nav#global_nav ul li:after {
         content: "";
         margin-left: .5em; }
