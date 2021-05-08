@@ -429,7 +429,7 @@ nav#global_nav {
       -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       left: auto;
-      right: 4vw;
+      right: 2vw;
       bottom: 1vh;
       top: auto;
       position: fixed;
