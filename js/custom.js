@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     var gallery_id_array = ["CALENDAR_1", "CALENDAR_2", "FOOD_1", "FOOD_2", "FOOD_3", "FOOD_4", "LIFESTYLE_1", "LIFESTYLE_2", "LIFESTYLE_3"],
         gallery_num_array = ["9","13","7","18","7","5","24","11","8"]
-        gallery_bgc_array = ["pink","pink","lightyellow","lightyellow","lightyellow","lightyellow","cornsilk","cornsilk","cornsilk"]
+        gallery_bgc_array = ["","","#c0c1c6","#c0c1c6","#c0c1c6","#c0c1c6","","",""]
 
     function gallery_load(id, label){
 
