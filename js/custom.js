@@ -27,11 +27,12 @@ $(document).ready(function(){
                 if(i < 10) {k = "00"+i;} else {k = "0"+i;}
                 myhtml += 
                     '<li data-original="sample/'+gallery_id_array[id]+'/'+k+'.jpg" class="lazy g'+id+'"><a href="sample/'+gallery_id_array[id]+'/'+k+'.jpg"></a>'+
-                    '</li>'
+                    '</li>'  //
             }
             myhtml += '</ul></div>';
             $("#gallery").append(myhtml);
             $('#gallery'+id).slickLightbox({});
+
     } else {
         // PC
 
@@ -83,7 +84,7 @@ $(document).ready(function(){
             for(i = 1; i <= gallery_num_array[id]; i++){
                 if(i < 10) {k = "00"+i;} else {k = "0"+i;}
                 myhtml += 
-                    '<li ><a href="sample/'+gallery_id_array[id]+'/'+k+'.jpg">'+
+                    '<li ><a href="sample/'+gallery_id_array[id]+'/'+k+'.jpg"  data-lightbox="lgbpc">'+
                     '<img src="sample/'+gallery_id_array[id]+'/'+k+'.jpg" class="lazy"></a></li>'  //
             }
 
@@ -109,8 +110,6 @@ $(document).ready(function(){
                 minItems: 1,
 		move: 1
 	});
-
-        $('#gallery'+id).slickLightbox({});
 
     };
 
