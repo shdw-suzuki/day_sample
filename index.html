@@ -40,9 +40,6 @@
     <script type="text/javascript" src="js/lity.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" type="text/javascript"></script>
 </head>
    
 <body class="opening" style="opacity: 1;">
@@ -176,15 +173,7 @@
             <footer id="footer"><a href="">c YUICHI NOGUCHI</a></footer>
         </div>
    </div>
-<script>
-lightbox.option({
-  'resizeDuration': 400,
-  'wrapAround': true,
-  'disableScrolling': true,
-  'fitImagesInViewport': true,
-  'showImageNumberLabel': false
-})
-</script>
+
 <style>
 .lightboxOverlay {
     background-color: white;
@@ -328,60 +317,7 @@ nav#gallery_nav {
 .opening nav#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
 nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
 
-.lb-nav a.lb-prev {
-  width: 100px;
-  position: fixed;
-  float:left;
-  left:0px;
-  top: 90vh;
-  opacity:1;
-  background: url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/prev.png) no-repeat;
-  background-size: 35px;
-} 
-
-.lb-nav a.lb-next {
-  width: 100px;
-  position: fixed;
-  float:left;
-  left: 100px;
-  top: 90vh;
-  opacity:1;
-  background: url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/next.png) no-repeat;
-  background-size: 35px;
-
-}
-.lb-data .lb-close{
-  z-index:100;
-  position: fixed;
-  float:right;
-  right: 20px;
-  bottom: 5vh;
-}
- #lightboxOverlay{pointer-events: none;}
 }
 
-
-@media all and (min-width: 768px) {
-.lb-nav a.lb-prev {
-  width: 40%;
-  position: fixed;
-  left: 50px;
-  top: 10px;
-} 
-
-.lb-nav a.lb-next {
-  width: 40%;
-  position: fixed;
-  right: 50px;
-  top: 10px;
-}
-.lb-data .lb-close{
-  width: 40%;
-  position: fixed;
-  right: 50px;
-  top: 10px;
-  z-index:100;
-}
-}
 </style>
 </body></html>
