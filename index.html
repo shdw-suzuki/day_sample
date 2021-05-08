@@ -146,6 +146,13 @@
                 <div class="myoccupation">PHOTOGRAPHER</div>
                 <h1 class="myname"><a href=""><img src="css/logo_black.svg" alt="YUICHI NOGUCHI"></a></h1>
             </header>
+
+<p id="slideshow">
+   <img src="photo/top001.jpg" alt="画像1" width="66%" class="active">
+   <img src="photo/top002.jpg" alt="画像2" width="66%" >
+   <img src="photo/top001.jpg" alt="画像1" width="66%" >
+   <img src="photo/top002.jpg" alt="画像2" width="66%" >
+</p>
             <nav id="global_nav" class="">
                 <ul>
 		　　<li class="dropdown"><a id="dropdown">portfolio /</a>
@@ -184,8 +191,48 @@ lightbox.option({
   'fitImagesInViewport': true,
   'showImageNumberLabel': false
 })
+
+function slideSwitch() {
+   var $active = $('#slideshow img.active');
+
+   if ( $active.length == 0 ) $active = $('#slideshow img:last');
+
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow img:first');
+
+   $active.addClass('last-active');
+
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+$active.css({opacity: 0.0});
+      });
+}
+
+$(function() {
+   setInterval( "slideSwitch()", 6000 );
+});
 </script>
 <style>
+#slideshow {
+   position: relative;
+}
+#slideshow img {
+   position: absolute;
+   top: 2vh;
+   right:0;
+   z-index: 8;
+   opacity: 0.0;
+}
+#slideshow img.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+#slideshow img.last-active {
+   z-index: 9;
+}
+
 .lightboxOverlay {
     background-color: white;
     opacity: 1; 
@@ -313,7 +360,7 @@ nav#gallery_nav {
 }
 
 @media all and (max-width: 768px) {
-    .lightboxOverlay{overflow:hidden;}
+    .slick-lightbox{overflow:hidden;}
     .flexslider {padding-top:0vh;}
     nav#gallery_nav {
     background-color: white;
@@ -324,6 +371,7 @@ nav#gallery_nav {
     opacity: 0;
     visibility: hidden;
     }
+    #slideshow {display:none;}
 
 .opening nav#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
 nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
