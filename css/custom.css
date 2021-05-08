@@ -659,13 +659,3 @@ footer {
       font-size: 1em;
       padding-bottom: 1vh; } }
 
-
-.slick-lightbox-slick-item-inner {
-    max-width: 30%;
-    max-height: 50%;
-}
-.slick-lightbox-slick-item {
-    max-width: 30%;
-}
-
-
