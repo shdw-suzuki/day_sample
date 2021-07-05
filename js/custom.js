@@ -5,6 +5,7 @@ $(document).ready(function(){
     var gallery_id_array = ["Landscape", "Lifestyle", "Food", "Hotel", "Craft", "Studio", "Calendar", "Still Life"],
         gallery_num_array = ["6","5","5","2","6","2","2","2"],
 	gallery_url_array = ["landscape", "lifestyle", "food", "hotel", "craft", "studio", "calendar", "still-life"],
+	gallery_folder_array = ["LANDSCAPE", "LIFESTYLE", "FOOD", "HOTEL", "CRAFT", "STUDIO", "CALENDAR", "StillLife"],
 
         sub_id_array = [["ESTONIA", "hawaii 01","hawaii 02","hawaii 03","HIMALAYA", "LATVIA"],
                         ["Oahu 01 _ Hawaii Style","Oahu 02 _ Hawaii Style", "私がととのう作業場。_ キナリノ","平戸 _ DISCOVER JAPAN", "料理上手の器選び"],
@@ -70,7 +71,7 @@ $(document).ready(function(){
             myhtml += '<ul class="gallery" id="gallery99">';
             for(id = 0; id <= 7; id++){
                 for(i = 0; i < gallery_num_array[id]; i++){
-                    myhtml += '<li data-original="photo/'+gallery_id_array[id]+'/'+sub_id_array[id][i]+'/000.webp" class="lazy g'+id+'s'+i+'">'+
+                    myhtml += '<li data-original="photo/'+gallery_folder_array[id]+'/'+sub_id_array[id][i]+'/000.webp" class="lazy g'+id+'s'+i+'">'+
 			'<div  class="_title0">'+gallery_id_array[id]+'</div><div  class="_title">'+sub_name_array[id][i]+'</div></li>'
                 }
             }
@@ -110,7 +111,7 @@ $(document).ready(function(){
             myhtml += '<ul class="gallery" id="gallery99">';
             for(id = 0; id <= 7; id++){
                 for(i = 0; i < gallery_num_array[id]; i++){
-                    myhtml += '<li data-original="photo/'+gallery_id_array[id]+'/'+sub_id_array[id][i]+'/000.webp" class="lazy g'+id+'s'+i+'">'+
+                    myhtml += '<li data-original="photo/'+gallery_folder_array[id]+'/'+sub_id_array[id][i]+'/000.webp" class="lazy g'+id+'s'+i+'">'+
 			'<div  class="_title0">'+gallery_id_array[id]+'</div><div  class="_title">'+sub_name_array[id][i]+'</div></li>'
                 }
             }
