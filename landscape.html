@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="keywords" content="YUICHI NOGUCHI, photographer, カメラマン">
+    <meta name="description" content="YUICHI NOGUCHI">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="author" content="YUICHI NOGUCHI">
+    <meta name="copyright" content="YUICHI NOGUCHI">
+    <title>YUICHI NOGUCHI - PHOTOGRAPHER</title>
+    
+    <link rel="shortcut icon" href="ati.png">
+    <link rel="apple-touch-icon" href="ati.png">
+	
+    <meta property="og:title" content="YUICHI NOGUCHI - PHOTOGRAPHER">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="ati.png">
+    <meta property="og:site_name" content="YUICHI NOGUCHI - PHOTOGRAPHER">
+    <meta property="og:description" content="YUICHI NOGUCHI">
+   
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/custom_photo.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>    
+    <script type="text/javascript" src="js/jquery.easing.js"></script>    
+    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" type="text/javascript"></script>
+
+</head>
+<body style="opacity: 1;">
+	    <header>
+            <div style="display:flex;justify-content: space-between;flex-wrap: wrap;">
+            	<div id="maintitle" style="">
+		<a href="index.html"><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;padding-top:11%;padding-left:6% ;"></a>
+
+            	<nav id="gallery_nav" style="font-size: 1.5vw;padding-left: 1em">
+		<div style="font-size: 2vw;line-height:4em;cursor: default;" >Landscape</div>
+                <div class="gallery_nav_item"><div id="gn_0" class="gallery_title">Estonia</div></div>
+                <div class="gallery_nav_item"><div id="gn_1" class="gallery_title">Hawaii 01</div></div>
+                <div class="gallery_nav_item"><div id="gn_2" class="gallery_title">Hawaii 02</div></div>
+                <div class="gallery_nav_item"><div id="gn_3" class="gallery_title">Hawaii 03</div></div>
+                <div class="gallery_nav_item"><div id="gn_4" class="gallery_title">Himalaya</div></div>
+                <div class="gallery_nav_item"><div id="gn_5" class="gallery_title">Latvia</div></div>
+
+		<div style="font-size: 0.8vw;position: fixed;bottom: 0;padding-bottom: 3%;">&#169; Yuichi Noguchi all rights reserved.</div>
+            	</nav>
+
+
+		</div>
+
+            </div>
+	    </header>
+        <div id="wrapper">
+        <section id="opening" style="display:none;">
+
+        </section>
+        <div id="content">
+            	<nav id="global_nav" class="">
+                    <ul>
+		　　    <li><a href="portfolio.html">Portfolio　　</a></li>
+                        <li><a href="about.html">About　　</a></li>
+                        <li><a href="contact.html">Contact　　</a></li>
+                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:2vw;"></a></li>
+                    </ul>
+            	</nav>
+                <section id="gallery"></section>
+        </div>
+        </div>
+	<div id="sub_content">
+	<div id="sub_wrapper">
+		<div class="openbtn"><span></span><span></span></div>
+		<div class="_title0">Landscape</div>
+		<div class="_title">Estonia</div>
+	</div>
+	</div>
+	<div id="nav_wrapper">
+		<div class="openbtn active"><span></span><span></span></div>
+
+		<nav id="g-nav" class="panelactive">
+                    <ul>
+		　　    <li><a>Landscape</a></li>
+                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:8vw;top:80vh;position:fixed;"></a></li>
+                    </ul>
+		</nav>
+		<nav id="g-nav-sub" class="panelactive">
+                    <ul id="mpn">
+                        <li><a href="landscape.html?sub=0"  ontouchstart>Estonia</a></li>
+                        <li><a href="landscape.html?sub=1"  ontouchstart>Hawaii 01</a></li>
+                        <li><a href="landscape.html?sub=2"  ontouchstart>Hawaii 02</a></li>
+                        <li><a href="landscape.html?sub=3"  ontouchstart>Hawaii 03</a></li>
+                        <li><a href="landscape.html?sub=4"  ontouchstart>Himalaya</a></li>
+                        <li><a href="landscape.html?sub=5"  ontouchstart>Latvia</a></li>
+                    </ul>
+		</nav>
+	</div>
+</body>
+<script>
+let start_position = 0,     //初期位置０
+    window_position,
+    $window = $(window),
+    $header = $('#global_nav')
+var galleryTop = $("#gallery").offset().top;
+// スクロールイベントを設定
+$window.on( 'scroll' , function(){
+    // スクロール量の取得
+    window_position = $(this).scrollTop();
+
+    if (window_position <= start_position) {
+        $header.css('top','0');
+    } else {
+        $header.css('top','-120px');
+    }
+    // 現在の位置を更新する
+    start_position = window_position;
+        if( $(this).scrollTop() > galleryTop ) {
+
+        } else {
+        $header.css('top','0');
+	}
+});
+// 中途半端なところでロードされても良いようにスクロールイベントを発生させる
+$window.trigger('scroll');
+
+lightbox.option({
+  'resizeDuration': 400,
+  'wrapAround': true,
+  'disableScrolling': true,
+  'fitImagesInViewport': true,
+  'showImageNumberLabel': true,
+  'albumLabel': "%1 / %2"
+})
+</script>
+<style>
+#sub_content{
+    width: 100vw;
+    height: 120px;
+    position: fixed;
+    z-index: 99999;
+    background:#c8cdcd;
+}
+#sub_wrapper {
+    width: 85%;
+    /* height: 50px; */
+    position: fixed;
+    z-index: 9999;
+    margin: 7vw;
+    top: 40px;
+}
+#sub_wrapper ._title0 {
+    position: relative;
+    top: 80%;
+    float: left;
+    letter-spacing: .05em;
+    padding-left: 0;
+    display: inline-block;
+    font-size: 4vw;
+}
+#sub_wrapper ._title {
+    position: relative;
+    top: 87%;
+    float: left;
+    letter-spacing: .05em;
+    padding-top: 1%;
+    display: inline-block;
+    border-top: 1px solid #323232;
+    width: 100%;
+    font-size: 4vw;
+
+}
+.openbtn span {background-color: #323232;}
+#g-nav ul {top:16%;left: 24%;}
+#mpn li a{font-size:5vw;}
+html,body,header{background:white;}
+#content{
+	background:#c8cdcd;
+	//width:75vw;
+	//height:100vh;
+	right: 0;
+	z-index:9999;
+}
+.photo img{
+	max-height:60vh;
+        max-width:80%;
+   position: absolute;          /* 位置指定 */
+   top:  0;                     /* 位置指定 */
+   bottom:  0;                  /* 位置指定 */
+   left:  0;                    /* 位置指定 */
+   right:  0;                   /* 位置指定 */
+   margin:  auto;               /* 中央寄せ */
+}
+header{padding:0 2vw;}
+#wrapper{width:75%;float:right;z-index: 9999;}
+
+.lightboxOverlay {
+    background-color: white;
+    opacity: 1; 
+}
+.lb-outerContainer {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+}
+@media all and (max-width: 768px) {
+
+#gallery {
+    padding-top: 160px;
+}
+#gallery .gallery li {
+    width: 40vw;
+    height: 40vw;
+    margin-left: 2vw;
+    margin-right: 6vw;
+    margin-bottom: 6vw;
+}
+    .slick-lightbox{overflow:hidden;}
+    .flexslider {padding-top:0vh;}
+
+    nav#gallery_nav {
+    background-color: white;
+    margin-top: 4vh;
+    color:black;
+    }
+    nav#global_nav.sticky,#navtop {
+    opacity: 0;
+    visibility: hidden;
+    }
+    #slideshow {display:none;}
+#wrapper{width:100%;float:left;z-index: 9999;}
+.opening na#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
+nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
+.lightbox{margin-top: 70px;}
+.lightboxOverlay {
+    background-color: #c8cdcd;
+    opacity: 1; 
+}
+.lightbox .lb-image {
+    border-radius: 0px;
+    border: 0px solid white;
+}
+.lb-data .lb-number {
+    padding-bottom: 1em;
+    font-size: 3vw;
+    color: #323232;
+    position: fixed;
+    top: 94.5vh;
+    left: 45%;
+}
+.lb-nav a.lb-prev {
+  width: 30%;
+  position: fixed;
+  float:left;
+  left:3vh;
+  top: 94vh;
+  opacity:1;
+  background: url(svg/prev.svg) no-repeat;
+  background-size: 12%;
+} 
+
+.lb-nav a.lb-next {
+  width: 30%;
+  position: fixed;
+  float:right;
+  right: -20vw;
+  top: 94vh;
+  opacity:1;
+  background: url(svg/next.svg) no-repeat;
+  background-size: 12%;
+
+}
+
+.lb-data .lb-close{
+    z-index: 9999999;
+    position: fixed;
+    float: right;
+    right: 22px;
+    top: 4vh;
+    background: url(svg/close.svg) top right no-repeat;
+    width: 6%;
+    height: 6%;
+    opacity: 1;
+}
+ #lightboxOverlay{pointer-events: none;}
+
+div.openbtn.active{
+    position: fixed;
+    float: left;
+    left: 4vh;
+    top: 3vh;
+    opacity: 1;
+    background: url(svg/prev.svg) no-repeat;
+    background-size: 30%;
+}
+.openbtn.active span{display:none;}
+}
+
+
+@media all and (min-width: 768px) {
+.lb-nav a.lb-prev {
+  width: 40%;
+  position: fixed;
+  left: 50px;
+  top: 10px;
+} 
+
+.lb-nav a.lb-next {
+  width: 40%;
+  position: fixed;
+  right: 50px;
+  top: 10px;
+}
+.lb-data .lb-close{
+  width: 40%;
+  position: fixed;
+  right: 50px;
+  top: 10px;
+  z-index:100;
+}
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 1vw;
+    color: #969696;
+    text-align: center;
+}
+.lb-data .lb-details {
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 1.1em;
+}
+.lightbox{right: 0px;margin: 0 auto;}
+.lb-data .lb-close {
+  background: url(svg/close.svg) top right no-repeat;
+  background-size: 2.5%;
+  right: 4vw;
+  top: 50px;
+  z-index: 100;
+}
+.lb-nav a.lb-prev {
+  background: url(svg/prev.svg) no-repeat;
+  background-size: 1.5%;
+  width: 40%;
+  position: fixed;
+  left: 4vw;
+  top: 50vh;
+  opacity: 1;
+}
+.lb-nav a.lb-next {
+  background: url(svg/next.svg) no-repeat;
+  background-size: 1.5%;
+  width: 40%;
+  position: fixed;
+  right: -35vw;
+  top: 50vh;
+  opacity: 1;
+}
+}
+</style>
+<script>
+$(document).ready(function(){
+    var gallery_id_array = ["LANDSCAPE"],
+        sub_id_array = ["ESTONIA", "hawaii 01","hawaii 02","hawaii 03","HIMALAYA", "LATVIA"],
+        sub_name_array = ["Estonia", "Hawaii 01","Hawaii 02","Hawaii 03","Himalaya", "Latvia"],
+        sub_num_array = ["39","35","83","36","46","31"]
+
+    function gallery_load(id){
+        var myhtml = "",
+            k = "";
+
+        $("#gallery").empty();
+        myhtml += '<div class="gallery_label"></div>';
+            num= id.substr(3,1);
+            id = 0;
+            myhtml += '<ul class="gallery" id="gallery'+id+'">';
+                for(i = 1; i < sub_num_array[num]; i++){
+                    if(i<10){i = '0' + i}
+		    myhtml += '<a href="photo/'+gallery_id_array[id]+'/'+sub_id_array[num]+'/0'+[i]+'.webp"  data-lightbox="lgbpc">'
+                    myhtml += '<li data-original="photo/'+gallery_id_array[id]+'/'+sub_id_array[num]+'/0'+[i]+'.webp" class="lazy g'+id+'s'+num+'"></li></a>'
+                }
+            myhtml += '</ul></div>';
+            $("#gallery").append(myhtml);
+
+        $( ".lazy" ).lazyload(
+            {
+                threshold: 200 ,			// 200pxの距離まで近づいたら表示する
+                effect: "fadeIn" ,		// じわじわっと表示させる
+                effect_speed: 1000 ,		// 3秒かけて表示させる
+            } ) ;
+    };
+
+    $('#gallery_nav .gallery_title').mouseenter(function() {
+        var myID = $(this).attr("id");
+        //ナビアイテムのアクティブ化
+        var $navItem = $("#gallery_nav").find('.gallery_title');
+        $navItem.css('color','#969696');
+        $(this).css('color','#323232');
+
+        gallery_load(myID);
+    });
+
+    $(window).load(function() {
+        $('body,html').animate({scrollTop:0}, 1, 'easeInOutExpo');
+        $("body").css({"opacity":1});
+    });
+
+$(function () {
+    var urlPrm = new Object;
+    var urlSearch = location.search.substring(1).split('&');
+    for(i=0;urlSearch[i];i++) {
+        var kv = urlSearch[i].split('=');
+        urlPrm[kv[0]]=kv[1];
+    }
+    a = urlPrm.sub;
+    b = 0;
+    if(a=="" || a==undefined){a = 0;b = 1;};
+    const ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
+        // スマートフォン
+	if(b == 1){
+	$("#wrapper").css({"display":"none"});
+	$("#sub_content").css({"display":"none"});
+	}else{
+	$("#nav_wrapper").css({"display":"none"});
+	}
+	$("header").css({"visibility":"hidden"});
+	$("header").css({"display":"none"});
+	$("#global_nav").css({"display":"none"});
+	$("#lightbox").css({"top":"120px"});
+        gallery_load('gn_' + a);
+	$("._title").empty();
+	$("._title").append(sub_name_array[a]);
+
+
+    $('.lb-close').bind('click', function() {
+	$("#sub_content").css({"width":"100%"});});
+    $('.lazy').bind('click', function() {
+	$("#sub_content").css({"width":"80%"});});
+    $('.openbtn').bind('click', function() {
+	window.location.href = 'landscape.html';});
+    $('.openbtn.active').bind('click', function() {
+	window.location.href = 'portfolio.html';});
+
+
+    var $nav = $('#nav_wrapper');
+	$('#dropdown').click(function (){
+        	$nav.addClass('is-visible');
+    	});
+
+
+    	$('#nav_close').click(function (){
+        	$nav.removeClass('is-visible');
+	});
+
+    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
+        // タブレット
+	$(function() {
+	$('.dropdown').hover(function() {
+	$('#dropdown-menu').slideToggle();
+	}, function() {
+	$('#dropdown-menu').hide();
+	});
+	});
+    } else {
+        // PC
+	$("#nav_wrapper").css({"display":"none"});
+	$(".openbtn").css({"display":"none"});
+	$("#sub_content").css({"display":"none"});
+        $("#gn_" + a).css('color','#323232');
+        gallery_load('gn_' + a);
+    };
+});
+
+
+});
+</script>
+</html>
