@@ -1,0 +1,33 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4100904, 2021-06-10T05:44:24-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FuturaPT-Book by ParaType
+ * URL: https://www.myfonts.com/fonts/paratype/futura-book/futura-book/
+ * Copyright: Copyright &amp;#x00A9; 1995 ParaGraph Intl., &amp;#x00A9; 1998 ParaType Inc., ParaType Ltd. All rights reserved.
+ * 
+ * 
+ * 
+ * c 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3e9328");
+  
+@font-face {
+  font-family: "FuturaPT-Book";
+  src: url('webFonts/FuturaPTBook/font.woff2') format('woff2'), url('webFonts/FuturaPTBook/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: "GenShinGothic-Regular";
+  src: url('webFonts/GenShinGothic-Regular/font.woff2') format('woff2'), url('webFonts/GenShinGothic-Regular/font.woff') format('woff');
+}
+
