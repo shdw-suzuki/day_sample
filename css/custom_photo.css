@@ -244,7 +244,7 @@ overflow-x: hidden;
     -ms-transition: transform .5s ease-in-out, filter .5s ease-in-out;
     -o-transition: transform .5s ease-in-out, filter .5s ease-in-out;
     transition: transform .5s ease-in-out, filter .5s ease-in-out; }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 168px) {
         #gallery .gallery li:hover {
           -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -289,10 +289,10 @@ overflow-x: hidden;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 168px) {
           #gallery .gallery._group .gallery_text_wrapper {
             pointer-events: none; } }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 168px) {
         #gallery .gallery._group:hover {
           transform: translateY(-0.5em); }
           #gallery .gallery._group:hover .gallery_text_wrapper {
@@ -306,7 +306,7 @@ overflow-x: hidden;
           transform: translateY(0em); }
       #gallery .gallery._group li:nth-child(n+2) {
         display: none; }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 168px) {
     #wrapper {
       width: 95%;}
     #gallery {
