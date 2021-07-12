@@ -20,26 +20,29 @@
     <meta property="og:description" content="YUICHI NOGUCHI">
    
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/slick-lightbox.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/custom_photo.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
 
 
     <script type="text/javascript" src="js/jquery.js"></script>    
     <script type="text/javascript" src="js/jquery.easing.js"></script>    
-    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>    
+    <script type="text/javascript" src="js/slick-lightbox.js"></script>
 
 </head>
 <body style="opacity: 1;">
 	    <header>
             <div style="display:flex;justify-content: space-between;flex-wrap: wrap;">
             	<div id="maintitle" style="">
-		<a href="index.html"><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;padding-top:11%;padding-left:6% ;"></a>
+		<a href="index.html"><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;max-width:230px;min-width:200px;padding-top:11%;padding-left:6% ;"></a>
 
-            	<nav id="gallery_nav" style="font-size: 1.5vw;padding-left: 1em">
-		<div style="font-size: 2vw;line-height:4em;cursor: default;" >Landscape</div>
+            	<nav id="gallery_nav" style="font-size: 16px;padding-left: 1em">
+		<div style="font-size: 24px;line-height:4em;cursor: default;" >Landscape</div>
                 <div class="gallery_nav_item"><div id="gn_0" class="gallery_title">Estonia</div></div>
                 <div class="gallery_nav_item"><div id="gn_1" class="gallery_title">Hawaii 01</div></div>
                 <div class="gallery_nav_item"><div id="gn_2" class="gallery_title">Hawaii 02</div></div>
@@ -47,7 +50,9 @@
                 <div class="gallery_nav_item"><div id="gn_4" class="gallery_title">Himalaya</div></div>
                 <div class="gallery_nav_item"><div id="gn_5" class="gallery_title">Latvia</div></div>
 
-		<div style="font-size: 0.8vw;position: fixed;bottom: 0;padding-bottom: 3%;">&#169; Yuichi Noguchi all rights reserved.</div>
+                <div id="backtop" style="margin-top: 80px; height: 12px; width: 12px; background: url(svg/close.svg) top right no-repeat;"></div>
+
+		<div style="font-size: 9px;position: fixed;bottom: 0;padding-bottom: 3%;">&#169; Yuichi Noguchi all rights reserved.</div>
             	</nav>
 
 
@@ -56,6 +61,7 @@
             </div>
 	    </header>
         <div id="wrapper">
+	<div id="headerback" style="position: fixed;background: #c8cdcd;height: 90px;width: 100%;z-index: 1;"></div>
         <section id="opening" style="display:none;">
 
         </section>
@@ -65,12 +71,15 @@
 		　　    <li><a href="portfolio.html">Portfolio　　</a></li>
                         <li><a href="about.html">About　　</a></li>
                         <li><a href="contact.html">Contact　　</a></li>
-                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:2vw;"></a></li>
+                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:2vw;max-width:20px;"></a></li>
                     </ul>
             	</nav>
                 <section id="gallery"></section>
         </div>
         </div>
+
+	<div id="sub_content1" style="width: 100vw;height: 120px;position: fixed;z-index: 999;background: #c8cdcd;"></div>
+
 	<div id="sub_content">
 	<div id="sub_wrapper">
 		<div class="openbtn"><span></span><span></span></div>
@@ -111,31 +120,30 @@ $window.on( 'scroll' , function(){
     window_position = $(this).scrollTop();
 
     if (window_position <= start_position) {
-        $header.css('top','0');
+        $header.css('top','25px');
+        $('#headerback').css('top','0');
     } else {
         $header.css('top','-120px');
+        $('#headerback').css('top','-120px');
     }
     // 現在の位置を更新する
     start_position = window_position;
         if( $(this).scrollTop() > galleryTop ) {
 
         } else {
-        $header.css('top','0');
+        $header.css('top','25px');
+        $('#headerback').css('top','0');
 	}
 });
 // 中途半端なところでロードされても良いようにスクロールイベントを発生させる
 $window.trigger('scroll');
 
-lightbox.option({
-  'resizeDuration': 400,
-  'wrapAround': true,
-  'disableScrolling': true,
-  'fitImagesInViewport': true,
-  'showImageNumberLabel': true,
-  'albumLabel': "%1 / %2"
-})
 </script>
 <style>
+nav#gallery_nav .gallery_nav_item {
+    opacity: 1;
+    margin-bottom: 30px;
+}
 #sub_content{
     width: 100vw;
     height: 120px;
@@ -173,8 +181,8 @@ lightbox.option({
 
 }
 .openbtn span {background-color: #323232;}
-#g-nav ul {top:16%;left: 24%;}
-#mpn li a{font-size:5vw;}
+#g-nav ul {top:16%;left: 14%;}
+#mpn li a{font-size:4vw;}
 html,body,header{background:white;}
 #content{
 	background:#c8cdcd;
@@ -194,20 +202,61 @@ html,body,header{background:white;}
    margin:  auto;               /* 中央寄せ */
 }
 header{padding:0 2vw;}
-#wrapper{width:75%;float:right;z-index: 9999;}
+#wrapper {
+    width: 100%;
+    float: left;
+    z-index: 9999;
+    left: 300px;
+    padding-right: 340px;
+}
 
-.lightboxOverlay {
-    background-color: white;
-    opacity: 1; 
+.slick-prev:before, .slick-next:before, .slick-lightbox-close:before {
+    color: #323232;
+    opacity: 1;
 }
-.lb-outerContainer {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
+
+.slick-lightbox .slick-next {
+    color: #323232;
+    background: url(svg/next.svg) no-repeat;
+    background-size: 9px;
+    top: 50vh;
 }
+.slick-lightbox .slick-prev {
+    margin-left: 6vw;
+    color: #323232;
+    background: url(svg/prev.svg) no-repeat;
+    background-size: 9px;
+    top: 50vh;
+}
+.slick-lightbox-close {
+    top: 12vh;
+    right: 10vw;
+    display: block;
+    height: 16px;
+    width: 16px;
+    background: url(svg/close.svg) top right no-repeat;
+}
+.slick-lightbox-slick-caption {
+    margin-top: 50px;
+    color: #323232;
+    position: fixed;
+    bottom: auto;
+}
+
+.slick-lightbox-close:before, .slick-next:before, .slick-prev:before {
+    content: '';
+}
+
 @media all and (max-width: 768px) {
+
+.slick-lightbox .slick-next{
+    top: auto;;
+    background-size: 30%;
+}
+.slick-lightbox .slick-prev {
+    top: auto;;
+    background-size: 30%;
+}
 
 #gallery {
     padding-top: 160px;
@@ -222,71 +271,13 @@ header{padding:0 2vw;}
     .slick-lightbox{overflow:hidden;}
     .flexslider {padding-top:0vh;}
 
-    nav#gallery_nav {
-    background-color: white;
-    margin-top: 4vh;
-    color:black;
-    }
+
     nav#global_nav.sticky,#navtop {
     opacity: 0;
     visibility: hidden;
     }
     #slideshow {display:none;}
-#wrapper{width:100%;float:left;z-index: 9999;}
-.opening na#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
-nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
-.lightbox{margin-top: 70px;}
-.lightboxOverlay {
-    background-color: #c8cdcd;
-    opacity: 1; 
-}
-.lightbox .lb-image {
-    border-radius: 0px;
-    border: 0px solid white;
-}
-.lb-data .lb-number {
-    padding-bottom: 1em;
-    font-size: 3vw;
-    color: #323232;
-    position: fixed;
-    top: 94.5vh;
-    left: 45%;
-}
-.lb-nav a.lb-prev {
-  width: 30%;
-  position: fixed;
-  float:left;
-  left:3vh;
-  top: 94vh;
-  opacity:1;
-  background: url(svg/prev.svg) no-repeat;
-  background-size: 12%;
-} 
-
-.lb-nav a.lb-next {
-  width: 30%;
-  position: fixed;
-  float:right;
-  right: -20vw;
-  top: 94vh;
-  opacity:1;
-  background: url(svg/next.svg) no-repeat;
-  background-size: 12%;
-
-}
-
-.lb-data .lb-close{
-    z-index: 9999999;
-    position: fixed;
-    float: right;
-    right: 22px;
-    top: 4vh;
-    background: url(svg/close.svg) top right no-repeat;
-    width: 6%;
-    height: 6%;
-    opacity: 1;
-}
- #lightboxOverlay{pointer-events: none;}
+    .opening na#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
 
 div.openbtn.active{
     position: fixed;
@@ -298,70 +289,34 @@ div.openbtn.active{
     background-size: 30%;
 }
 .openbtn.active span{display:none;}
+
+.slick-prev, .slick-next {
+    bottom: 50px;
+    height: auto;
+    top: auto;
+}
+.slick-lightbox-slick-caption {
+    bottom: 55px;
+}
+.slick-lightbox-slick-item {
+    margin-top: 25px;
+}
+.slick-lightbox-slick-img {
+    max-width: 98%;
+}
+
+.slick-lightbox-close {
+    top: 4vh;
+    right: 22px;
+    display: block;
+    height: 6%;
+    width: 6%;
+}
 }
 
 
 @media all and (min-width: 768px) {
-.lb-nav a.lb-prev {
-  width: 40%;
-  position: fixed;
-  left: 50px;
-  top: 10px;
-} 
 
-.lb-nav a.lb-next {
-  width: 40%;
-  position: fixed;
-  right: 50px;
-  top: 10px;
-}
-.lb-data .lb-close{
-  width: 40%;
-  position: fixed;
-  right: 50px;
-  top: 10px;
-  z-index:100;
-}
-.lb-data .lb-number {
-    display: block;
-    clear: left;
-    padding-bottom: 1em;
-    font-size: 1vw;
-    color: #969696;
-    text-align: center;
-}
-.lb-data .lb-details {
-    width: 100%;
-    float: left;
-    text-align: center;
-    line-height: 1.1em;
-}
-.lightbox{right: 0px;margin: 0 auto;}
-.lb-data .lb-close {
-  background: url(svg/close.svg) top right no-repeat;
-  background-size: 2.5%;
-  right: 4vw;
-  top: 50px;
-  z-index: 100;
-}
-.lb-nav a.lb-prev {
-  background: url(svg/prev.svg) no-repeat;
-  background-size: 1.5%;
-  width: 40%;
-  position: fixed;
-  left: 4vw;
-  top: 50vh;
-  opacity: 1;
-}
-.lb-nav a.lb-next {
-  background: url(svg/next.svg) no-repeat;
-  background-size: 1.5%;
-  width: 40%;
-  position: fixed;
-  right: -35vw;
-  top: 50vh;
-  opacity: 1;
-}
 }
 </style>
 <script>
@@ -380,13 +335,22 @@ $(document).ready(function(){
             num= id.substr(3,1);
             id = 0;
             myhtml += '<ul class="gallery" id="gallery'+id+'">';
-                for(i = 1; i < sub_num_array[num]; i++){
+                for(i = 1; i <= sub_num_array[num]; i++){
+		    gnum=i;
                     if(i<10){i = '0' + i}
-		    myhtml += '<a href="photo/'+gallery_id_array[id]+'/'+sub_id_array[num]+'/0'+[i]+'.webp"  data-lightbox="lgbpc">'
+		    myhtml += '<a href="photo/'+gallery_id_array[id]+'/'+sub_id_array[num]+'/0'+[i]+'.webp" data-caption="'+gnum+' / '+sub_num_array[num]+'">'
                     myhtml += '<li data-original="photo/'+gallery_id_array[id]+'/'+sub_id_array[num]+'/0'+[i]+'.webp" class="lazy g'+id+'s'+num+'"></li></a>'
                 }
             myhtml += '</ul></div>';
             $("#gallery").append(myhtml);
+
+    const ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
+            $("#gallery"+id).slickLightbox({caption:"caption",background:"#c8cdcd"});
+    } else {
+        // PC
+            $("#gallery"+id).slickLightbox({imageMaxHeight:0.75,caption:"caption"});
+    };
 
         $( ".lazy" ).lazyload(
             {
@@ -395,6 +359,7 @@ $(document).ready(function(){
                 effect_speed: 1000 ,		// 3秒かけて表示させる
             } ) ;
     };
+
 
     $('#gallery_nav .gallery_title').mouseenter(function() {
         var myID = $(this).attr("id");
@@ -426,8 +391,11 @@ $(function () {
         // スマートフォン
 	if(b == 1){
 	$("#wrapper").css({"display":"none"});
+	$("#sub_content1").css({"display":"none"});
 	$("#sub_content").css({"display":"none"});
-	}else{
+	}
+        else {
+
 	$("#nav_wrapper").css({"display":"none"});
 	}
 	$("header").css({"visibility":"hidden"});
@@ -437,27 +405,21 @@ $(function () {
         gallery_load('gn_' + a);
 	$("._title").empty();
 	$("._title").append(sub_name_array[a]);
+	$("#wrapper").css({"z-index":"99","left":"0","padding-right":"0"});
 
 
-    $('.lb-close').bind('click', function() {
+    $('button').trigger('click', function() {
 	$("#sub_content").css({"width":"100%"});});
     $('.lazy').bind('click', function() {
 	$("#sub_content").css({"width":"80%"});});
     $('.openbtn').bind('click', function() {
-	window.location.href = 'landscape.html';});
+	window.location.href = 'food.html';});
     $('.openbtn.active').bind('click', function() {
 	window.location.href = 'portfolio.html';});
 
 
     var $nav = $('#nav_wrapper');
-	$('#dropdown').click(function (){
-        	$nav.addClass('is-visible');
-    	});
 
-
-    	$('#nav_close').click(function (){
-        	$nav.removeClass('is-visible');
-	});
 
     } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
         // タブレット
@@ -472,9 +434,18 @@ $(function () {
         // PC
 	$("#nav_wrapper").css({"display":"none"});
 	$(".openbtn").css({"display":"none"});
+	$("#sub_content1").css({"display":"none"});
 	$("#sub_content").css({"display":"none"});
         $("#gn_" + a).css('color','#323232');
         gallery_load('gn_' + a);
+
+	if(b == 1){
+ 	$('#backtop').bind('click', function() {
+	window.location.href = 'portfolio.html?id=0';});
+	}else{
+ 	$('#backtop').bind('click', function() {
+	window.location.href = 'index.html?sub=g0s' + a;});
+	}
     };
 });
 

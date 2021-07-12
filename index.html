@@ -48,14 +48,14 @@
 
 	<header>
             <div style="display:flex;justify-content: space-between;flex-wrap: wrap;">
-            	<div id="headertitle" class="sticky"><a href=""><img src="svg/headertitle.svg" alt="YUICHI NOGUCHI" style="width:30vw;padding-top:11%;padding-left:6% ;"></a></div>
-            	<div id="maintitle"><a href=""><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;padding-top:11%;padding-left:6% ;"></a></div>
+            	<div id="headertitle" class="sticky"><a href=""><img src="svg/headertitle.svg" alt="YUICHI NOGUCHI" style="width:30vw;max-width:345px;min-width:300px;padding-top:30px;padding-left:6% ;"></a></div>
+            	<div id="maintitle"><a href=""><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;max-width:230px;min-width:200px;padding-top:30px;padding-left:6% ;"></a></div>
             	<nav id="global_nav" class="">
                     <ul>
 		　　    <li><a href="portfolio.html">Portfolio　　</a></li>
                         <li><a href="about.html">About　　</a></li>
                         <li><a href="contact.html">Contact　　</a></li>
-                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:2vw;"></a></li>
+                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:2vw;max-width:20px;"></a></li>
                     </ul>
             	</nav>
             </div>
@@ -67,7 +67,7 @@
 		<a id="link02" href="javascript:void(0);">Scroll</a>
 	    </div>
 
-	    <nav id="g-nav">
+	    <nav id="g-nav" style="z-index:9999;">
 		<div class="openbtn"><span></span><span></span></div>
 		<ul>
 		   <li><a href="portfolio.html">Portfolio　　</a></li>
@@ -102,7 +102,7 @@
 	</div>
 
 	<footer id="footer">
-	    <a id="link01" href="javascript:void(0);"><img src="svg/top.svg" style="width:2vw; position:relative;top:-100px;left: 88vw"></a>
+	    <a id="link01" href="javascript:void(0);"><img src="svg/top.svg" style="width:2vw; float: right; margin-right: -80px; margin-top: -100px;"></a>
 	    <span>&#169; Yuichi Noguchi all rights reserved.</span>
 	</footer>
 <script>
@@ -118,53 +118,66 @@ $('.slide-div').slick({
 
 
    $(function () {
+
+      var urlPrm = new Object;
+      var urlSearch = location.search.substring(1).split('&');
+      for(i=0;urlSearch[i];i++) {
+        var kv = urlSearch[i].split('=');
+        urlPrm[kv[0]]=kv[1];
+      }
+      a = urlPrm.sub;
+      b = 0;
+      if(a=="" || a==undefined){a = 0;b = 1;};
+
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
         // スマートフォン
-	let back_position = 0;
-	var i = 1;
-	var intervalId = setInterval(function() {
-	    if(i > 4) i = 1;
-		    if(i == 1) {$("#nav_wrapper").css({"background-image":"url(photo/top003.webp)","background-position":"right 18% center","background-size":"cover"});
+		var i = 1;
+		var intervalId1 = setInterval(function() {
+		    if(i == 1 || i > 4) {$("#nav_wrapper").css({"background-image":"url(photo/top003.webp)","background-position":"right 18% center","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitle.svg");
-				$('.openbtn').children('span').css("background-color","")};
+				$('.openbtn').children('span').css("background-color","");
+				i = 1;}
 
-		    if(i == 2) {$("#nav_wrapper").css({"background-image":"url(photo/top004.webp)","background-position":"left 19% center","background-size":"cover"});
+		    else if(i == 2) {$("#nav_wrapper").css({"background-image":"url(photo/top004.webp)","background-position":"left 19% center","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitle.svg");
-				$('.openbtn').children('span').css("background-color","")};
+				$('.openbtn').children('span').css("background-color","")}
 
-		    if(i == 3) {$("#nav_wrapper").css({"background-image":"url(photo/top002.webp)","background-position":"","background-size":"cover"});
+		    else if(i == 3) {$("#nav_wrapper").css({"background-image":"url(photo/top002.webp)","background-position":"","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitle.svg");
-				$('.openbtn').children('span').css("background-color","")};
+				$('.openbtn').children('span').css("background-color","")}
 
-		    if(i == 4) {$("#nav_wrapper").css({"background-image":"url(photo/top001.webp)","background-position":"left","background-size":"cover"});
+		    else if(i == 4) {$("#nav_wrapper").css({"background-image":"url(photo/top001.webp)","background-position":"left","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitleb.svg");
 				$('.openbtn').children('span').css("background-color","#323232")};
-	    i++;
-	    }, 7000);
+
+		    i++;
+		    }, 7000);
 
 	$window.on( 'scroll' , function(){
-	    if( $(this).scrollTop() > back_position ) {
-		window.clearInterval(intervalId);
+	    if( $(this).scrollTop() > 0) {
+		window.clearInterval(intervalId1);
+		window.clearInterval(intervalId2);
 		$('.openbtn').children('span').css("background-color","#323232");
 	    }else {
+		window.clearInterval(intervalId1);
+		window.clearInterval(intervalId2);
 		var i = 1;
-		var intervalId = setInterval(function() {
-		    if(i > 4) i = 1;
-
-		    if(i == 1) {$("#nav_wrapper").css({"background-image":"url(photo/top003.webp)","background-position":"right 18% center","background-size":"cover"});
+		var intervalId2 = setInterval(function() {
+		    if(i == 1 || i > 4) {$("#nav_wrapper").css({"background-image":"url(photo/top003.webp)","background-position":"right 18% center","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitle.svg");
-				$('.openbtn').children('span').css("background-color","")};
+				$('.openbtn').children('span').css("background-color","");
+				i = 1;}
 
-		    if(i == 2) {$("#nav_wrapper").css({"background-image":"url(photo/top004.webp)","background-position":"left 19% center","background-size":"cover"});
+		    else if(i == 2) {$("#nav_wrapper").css({"background-image":"url(photo/top004.webp)","background-position":"left 19% center","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitle.svg");
-				$('.openbtn').children('span').css("background-color","")};
+				$('.openbtn').children('span').css("background-color","")}
 
-		    if(i == 3) {$("#nav_wrapper").css({"background-image":"url(photo/top002.webp)","background-position":"","background-size":"cover"});
+		    else if(i == 3) {$("#nav_wrapper").css({"background-image":"url(photo/top002.webp)","background-position":"","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitle.svg");
-				$('.openbtn').children('span').css("background-color","")};
+				$('.openbtn').children('span').css("background-color","")}
 
-		    if(i == 4) {$("#nav_wrapper").css({"background-image":"url(photo/top001.webp)","background-position":"left","background-size":"cover"});
+		    else if(i == 4) {$("#nav_wrapper").css({"background-image":"url(photo/top001.webp)","background-position":"left","background-size":"cover"});
 				$('#mobiletitle').children('img').attr("src","svg/mobiletitleb.svg");
 				$('.openbtn').children('span').css("background-color","#323232")};
 
@@ -185,13 +198,22 @@ $('.slide-div').slick({
     	    $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
     	    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
     	    $("#link02").removeClass('active');
-1	});
+	});
 
 	$("#link02").bind('click', function() {
             const position = $('#gallery').offset().top;
             const speed = 200;
             $("html,body").animate({scrollTop:position},speed);
 	});
+
+      if(b==0){
+	$(window).on('load', function() {
+    	    $(".openbtn").toggleClass('active');//ボタン自身に activeクラスを付与し
+    	    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+    	    $('.openbtn').children('span').css("background-color","");
+    	    $("#link02").toggleClass('active');
+	});
+       }
 
     } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
         // タブレット
@@ -209,6 +231,23 @@ $('.slide-div').slick({
           const speed = 200;
           $("html,body").animate({scrollTop:position},speed);
       });
+
+
+      if(b==0){c = a.substr(1,1);
+	$(window).on('load', function() {
+            const position = $('#gallery').offset().top;
+            const speed = 200;
+            $("html,body").animate({scrollTop:position},speed);
+  	    if(c==0){$("html,body").animate({scrollTop:$("#g0s0").offset().top});};
+  	    if(c==1){$("html,body").animate({scrollTop:$("#g1s0").offset().top});};
+  	    if(c==2){$("html,body").animate({scrollTop:$("#g2s0").offset().top});};
+  	    if(c==3){$("html,body").animate({scrollTop:$("#g3s0").offset().top});};
+  	    if(c==4){$("html,body").animate({scrollTop:$("#g4s0").offset().top});};
+  	    if(c==5){$("html,body").animate({scrollTop:$("#g5s0").offset().top});};
+  	    if(c==6){$("html,body").animate({scrollTop:$("#g6s0").offset().top});};
+  	    if(c==7){$("html,body").animate({scrollTop:$("#g7s0").offset().top});};
+	});
+       }
     };
 });
 
@@ -216,7 +255,8 @@ $('.slide-div').slick({
 let start_position = 0,     //初期位置０
     window_position,
     $window = $(window),
-    $header = $('header')
+    $header = $('header'),
+    $scroll = $('#link02')
 var galleryTop = $("#gallery").offset().top;
 // スクロールイベントを設定
 $window.on( 'scroll' , function(){
@@ -237,13 +277,21 @@ $window.on( 'scroll' , function(){
         } else {
         $header.css('top','0');
 	}
+
+        if( $(this).scrollTop() == 0) {
+	$scroll.css('display','flex');
+        } else {
+        $scroll.css('display','none');
+	}
 });
 // 中途半端なところでロードされても良いようにスクロールイベントを発生させる
 $window.trigger('scroll');
+
+
 </script>
 <style>
 .flex{margin: 10vh 0 0 -15vw;overflow:hidden;}
-.slick-list{margin-left:30vw;overflow: visible;margin-right: -3.5vh;}
+.slick-list{margin-left:30vw;overflow: visible;margin-right: -40px;}
 
 #mobiletitle {
     width: 72vw;
@@ -295,19 +343,21 @@ nav#gallery_nav {
     padding-top:2vh;
 }
 
+.type a:after {
+    background: #fff;
+}
+
 @media all and (max-width: 768px) {
 .opening nav#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
-nav#global_nav a {background: rgba(255, 255, 255, 0.5);}
  .type a{color:#fff;margin-right: 8vw;}
  .type a:after{background:#fff;}
  .opening a:hover{color:#fff;}
  footer{display:none;}
  #link02.active{display:none;}
+  header{height:120px;}
 }
 
-@media all and (min-width: 1600px) {
-header{height:120px;} 
-}
+
 </style>
 </body>
 </html>
