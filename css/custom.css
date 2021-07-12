@@ -245,7 +245,7 @@ body {
         #gallery .gallery li:hover {
           -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-          transform: translateY(-0.2em); } }
+           } }
       #gallery .gallery li a {
         height: 100%;
         width: 100%;
@@ -390,13 +390,13 @@ nav#global_nav {
   float: right;
   z-index: 100;
   left: 0;
-  padding-top: 3%;
+  padding-top: 30px;
   opacity: 1;
   visibility: visible; }
   nav#global_nav a {
     cursor: pointer;}
   nav#global_nav ul {
-    font-size: 2vw;
+    font-size: 16px;
     font-weight: normal;
     letter-spacing: 0.1em;
     overflow: hidden;
@@ -410,28 +410,7 @@ nav#global_nav {
       nav#global_nav ul li:last-child:after {
         content: "";
         margin: 0; }
-  @media all and (min-width: 768px) {
-    nav#global_nav.sticky {position:fixed;top:1%;left:58%;
-       } }
-  @media all and (max-width: 768px) {
-    nav#global_nav ul {
-    font-size: 1.2em;}
-    nav#global_nav {
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      left: auto;
-      right: 2vw;
-      bottom: 5vh;
-      top: auto;
-      position: fixed;
-      letter-spacing: 0; }
-        nav#global_nav ul li:after {
-          margin-left: 0; }
-      nav#global_nav span {
-        display: none; } }
+
 
 nav#gallery_nav {
   width: 200px;
@@ -656,7 +635,7 @@ header {
 }
 
 footer {
-  padding: 100px;
+  padding: 7vw;
   font-size: 1em;
   letter-spacing: .1em;
   padding-bottom: 3%;
