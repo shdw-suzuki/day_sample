@@ -77,74 +77,83 @@ $(document).ready(function(){
             }
             myhtml += '</ul></div>';
             $("#gallery").append(myhtml);
-            $('.g0s0').on('click', function () {gls('gn_0', '0','HAWAII CALENDAR2021');});
-            $('.g0s1').on('click', function () {gls('gn_0', '1','Hawaii Style Calendar 2019');});
-            $('.g1s0').on('click', function () {gls('gn_1', '0','KIMURA LAUHARA SHOP _ HAWAII');});
-            $('.g1s1').on('click', function () {gls('gn_1', '1','OTA MOKKO _ ODAWARA');});
-            $('.g1s2').on('click', function () {gls('gn_1', '2','SNOWPEAK _ TSUBAMESANJO');});
-            $('.g1s3').on('click', function () {gls('gn_1', '3','TADAFUSA _ TSUBAMESANJO');});
-            $('.g1s4').on('click', function () {gls('gn_1', '4','TAKEUCHI OPTICAL _ SABAE');});
-            $('.g1s5').on('click', function () {gls('gn_1', '5','YOSHINORI TAKEMURA');});
-            $('.g2s0').on('click', function () {gls('gn_2', '0','今日の晩ごはん');});
-            $('.g2s1').on('click', function () {gls('gn_2', '1','フランスの季節を楽しむお菓子作り');});
-            $('.g2s2').on('click', function () {gls('gn_2', '2','大豆で美味しい毎日レシピ');});
-            $('.g2s3').on('click', function () {gls('gn_2', '3','自慢の煮込み');});
-            $('.g2s4').on('click', function () {gls('gn_2', '4','ON THE DISH');});
-            $('.g3s0').on('click', function () {gls('gn_3', '0','DISCOVER JAPAN');});
-            $('.g3s1').on('click', function () {gls('gn_3', '1','Tokyo Lifestyle Hotel');});
-            $('.g4s0').on('click', function () {gls('gn_4', '0','ESTONIA');});
-            $('.g4s1').on('click', function () {gls('gn_4', '1','hawaii 01');});
-            $('.g4s2').on('click', function () {gls('gn_4', '2','hawaii 02');});
-            $('.g4s3').on('click', function () {gls('gn_4', '3','hawaii 03');});
-            $('.g4s4').on('click', function () {gls('gn_4', '4','HIMALAYA');});
-            $('.g4s5').on('click', function () {gls('gn_4', '5','LATVIA');});
-            $('.g5s0').on('click', function () {gls('gn_5', '0','LIFESTYLE');});
-            $('.g5s1').on('click', function () {gls('gn_5', '1','LIFESTYLE');});
-            $('.g5s2').on('click', function () {gls('gn_5', '2','LIFESTYLE');});
-            $('.g5s3').on('click', function () {gls('gn_5', '3','LIFESTYLE');});
-            $('.g5s4').on('click', function () {gls('gn_5', '4','LIFESTYLE');});
-            $('.g6s0').on('click', function () {gls('gn_6', '0','BIGDOG');});
-            $('.g6s1').on('click', function () {gls('gn_6', '1','RERIC');});
+            $('.g0s0').on('click', function () {gls('gn_0', '0','Landscape');});
+            $('.g0s1').on('click', function () {gls('gn_0', '1','Landscape');});
+            $('.g0s2').on('click', function () {gls('gn_0', '2','Landscape');});
+            $('.g0s3').on('click', function () {gls('gn_0', '3','Landscape');});
+            $('.g0s4').on('click', function () {gls('gn_0', '4','Landscape');});
+            $('.g0s5').on('click', function () {gls('gn_0', '5','Landscape');});
+            $('.g1s0').on('click', function () {gls('gn_1', '0','Lifestyle');});
+            $('.g1s1').on('click', function () {gls('gn_1', '1','Lifestyle');});
+            $('.g1s2').on('click', function () {gls('gn_1', '2','Lifestyle');});
+            $('.g1s3').on('click', function () {gls('gn_1', '3','Lifestyle');});
+            $('.g1s4').on('click', function () {gls('gn_1', '4','Lifestyle');});
+            $('.g2s0').on('click', function () {gls('gn_2', '0','Food');});
+            $('.g2s1').on('click', function () {gls('gn_2', '1','Food');});
+            $('.g2s2').on('click', function () {gls('gn_2', '2','Food');});
+            $('.g2s3').on('click', function () {gls('gn_2', '3','Food');});
+            $('.g2s4').on('click', function () {gls('gn_2', '4','Food');});
+            $('.g3s0').on('click', function () {gls('gn_3', '0','Hotel');});
+            $('.g3s1').on('click', function () {gls('gn_3', '1','Hotel');});
+            $('.g4s0').on('click', function () {gls('gn_4', '0','Craft');});
+            $('.g4s1').on('click', function () {gls('gn_4', '1','Craft');});
+            $('.g4s2').on('click', function () {gls('gn_4', '2','Craft');});
+            $('.g4s3').on('click', function () {gls('gn_4', '3','Craft');});
+            $('.g4s4').on('click', function () {gls('gn_4', '4','Craft');});
+            $('.g4s5').on('click', function () {gls('gn_4', '5','Craft');});
+            $('.g5s0').on('click', function () {gls('gn_5', '0','Studio');});
+            $('.g5s1').on('click', function () {gls('gn_5', '1','Studio');});
+            $('.g6s0').on('click', function () {gls('gn_6', '0','Calendar');});
+            $('.g6s1').on('click', function () {gls('gn_6', '1','Calendar');});
+            $('.g7s0').on('click', function () {gls('gn_7', '0','Still Life');});
+            $('.g7s1').on('click', function () {gls('gn_7', '1','Still Life');});
 
     } else {
         // PC
             myhtml += '<ul class="gallery" id="gallery99">';
             for(id = 0; id <= 7; id++){
                 for(i = 0; i < gallery_num_array[id]; i++){
-                    myhtml += '<li data-original="photo/'+gallery_folder_array[id]+'/'+sub_id_array[id][i]+'/000.webp" class="lazy g'+id+'s'+i+'">'+
+                    myhtml += '<li data-original="photo/'+gallery_folder_array[id]+'/'+sub_id_array[id][i]+'/000.webp" class="lazy g'+id+'s'+i+'" id="g'+id+'s'+i+'">'+
 			'<div  class="_title0">'+gallery_id_array[id]+'</div><div  class="_title">'+sub_name_array[id][i]+'</div></li>'
                 }
             }
             myhtml += '</ul></div>';
             $("#gallery").append(myhtml);
-            $('.g0s0').on('click', function () {gls('gn_0', '0','HAWAII CALENDAR2021');});
-            $('.g0s1').on('click', function () {gls('gn_0', '1','Hawaii Style Calendar 2019');});
-            $('.g1s0').on('click', function () {gls('gn_1', '0','KIMURA LAUHARA SHOP _ HAWAII');});
-            $('.g1s1').on('click', function () {gls('gn_1', '1','OTA MOKKO _ ODAWARA');});
-            $('.g1s2').on('click', function () {gls('gn_1', '2','SNOWPEAK _ TSUBAMESANJO');});
-            $('.g1s3').on('click', function () {gls('gn_1', '3','TADAFUSA _ TSUBAMESANJO');});
-            $('.g1s4').on('click', function () {gls('gn_1', '4','TAKEUCHI OPTICAL _ SABAE');});
-            $('.g1s5').on('click', function () {gls('gn_1', '5','YOSHINORI TAKEMURA');});
-            $('.g2s0').on('click', function () {gls('gn_2', '0','今日の晩ごはん');});
-            $('.g2s1').on('click', function () {gls('gn_2', '1','フランスの季節を楽しむお菓子作り');});
-            $('.g2s2').on('click', function () {gls('gn_2', '2','大豆で美味しい毎日レシピ');});
-            $('.g2s3').on('click', function () {gls('gn_2', '3','自慢の煮込み');});
-            $('.g2s4').on('click', function () {gls('gn_2', '4','ON THE DISH');});
-            $('.g3s0').on('click', function () {gls('gn_3', '0','DISCOVER JAPAN');});
-            $('.g3s1').on('click', function () {gls('gn_3', '1','Tokyo Lifestyle Hotel');});
-            $('.g4s0').on('click', function () {gls('gn_4', '0','ESTONIA');});
-            $('.g4s1').on('click', function () {gls('gn_4', '1','hawaii 01');});
-            $('.g4s2').on('click', function () {gls('gn_4', '2','hawaii 02');});
-            $('.g4s3').on('click', function () {gls('gn_4', '3','hawaii 03');});
-            $('.g4s4').on('click', function () {gls('gn_4', '4','HIMALAYA');});
-            $('.g4s5').on('click', function () {gls('gn_4', '5','LATVIA');});
-            $('.g5s0').on('click', function () {gls('gn_5', '0','LIFESTYLE');});
-            $('.g5s1').on('click', function () {gls('gn_5', '1','LIFESTYLE');});
-            $('.g5s2').on('click', function () {gls('gn_5', '2','LIFESTYLE');});
-            $('.g5s3').on('click', function () {gls('gn_5', '3','LIFESTYLE');});
-            $('.g5s4').on('click', function () {gls('gn_5', '4','LIFESTYLE');});
-            $('.g6s0').on('click', function () {gls('gn_6', '0','BIGDOG');});
-            $('.g6s1').on('click', function () {gls('gn_6', '1','RERIC');});
+            $('.g0s0').on('click', function () {gls('gn_0', '0','Landscape');});
+            $('.g0s1').on('click', function () {gls('gn_0', '1','Landscape');});
+            $('.g0s2').on('click', function () {gls('gn_0', '2','Landscape');});
+            $('.g0s3').on('click', function () {gls('gn_0', '3','Landscape');});
+            $('.g0s4').on('click', function () {gls('gn_0', '4','Landscape');});
+            $('.g0s5').on('click', function () {gls('gn_0', '5','Landscape');});
+            $('.g1s0').on('click', function () {gls('gn_1', '0','Lifestyle');});
+            $('.g1s1').on('click', function () {gls('gn_1', '1','Lifestyle');});
+            $('.g1s2').on('click', function () {gls('gn_1', '2','Lifestyle');});
+            $('.g1s3').on('click', function () {gls('gn_1', '3','Lifestyle');});
+            $('.g1s4').on('click', function () {gls('gn_1', '4','Lifestyle');});
+            $('.g2s0').on('click', function () {gls('gn_2', '0','Food');});
+            $('.g2s1').on('click', function () {gls('gn_2', '1','Food');});
+            $('.g2s2').on('click', function () {gls('gn_2', '2','Food');});
+            $('.g2s3').on('click', function () {gls('gn_2', '3','Food');});
+            $('.g2s4').on('click', function () {gls('gn_2', '4','Food');});
+            $('.g3s0').on('click', function () {gls('gn_3', '0','Hotel');});
+            $('.g3s1').on('click', function () {gls('gn_3', '1','Hotel');});
+            $('.g4s0').on('click', function () {gls('gn_4', '0','Craft');});
+            $('.g4s1').on('click', function () {gls('gn_4', '1','Craft');});
+            $('.g4s2').on('click', function () {gls('gn_4', '2','Craft');});
+            $('.g4s3').on('click', function () {gls('gn_4', '3','Craft');});
+            $('.g4s4').on('click', function () {gls('gn_4', '4','Craft');});
+            $('.g4s5').on('click', function () {gls('gn_4', '5','Craft');});
+            $('.g5s0').on('click', function () {gls('gn_5', '0','Studio');});
+            $('.g5s1').on('click', function () {gls('gn_5', '1','Studio');});
+            $('.g6s0').on('click', function () {gls('gn_6', '0','Calendar');});
+            $('.g6s1').on('click', function () {gls('gn_6', '1','Calendar');});
+            $('.g7s0').on('click', function () {gls('gn_7', '0','Still Life');});
+            $('.g7s1').on('click', function () {gls('gn_7', '1','Still Life');});
+
+
+
+
+
     }
 
 
@@ -155,7 +164,7 @@ $(document).ready(function(){
                 effect_speed: 1500 ,		// 3秒かけて表示させる
             } ) ;
 
-	$("body,#wrapper").css("background-color",gallery_bgc_array[id]);
+
 
     };
 
@@ -294,6 +303,7 @@ $(function() {
 
 
 $(function () {
+
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
         // スマートフォン
@@ -325,11 +335,13 @@ $(function () {
 	});
 	});
         opening_load();
+
         $('#dropdown').click(function (){
 		        opening_load();
             var position = $('#gallery').offset().top;
             $("body,html").animate({scrollTop: position}, 1500,  'easeInOutExpo');
     	});
+
     };
         $('.js-close , #overlay').click(function () {
           $("body").removeClass("no_scroll"); // 背景固定させるクラス削除
@@ -339,3 +351,5 @@ $(function () {
 
 
 });
+
+
