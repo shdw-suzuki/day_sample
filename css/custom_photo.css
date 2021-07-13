@@ -453,6 +453,7 @@ nav#gallery_nav {
     margin-left: .5em; }
   nav#gallery_nav .gallery_title {
     //transform: translateX(1em);
+letter-spacing: .1em;
     cursor: pointer;
     color: #969696;
     font-weight: 400;
