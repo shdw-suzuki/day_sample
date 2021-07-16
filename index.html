@@ -4,7 +4,7 @@
 
     <meta name="keywords" content="YUICHI NOGUCHI, photographer, カメラマン">
     <meta name="description" content="YUICHI NOGUCHI">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <meta name="author" content="YUICHI NOGUCHI">
     <meta name="copyright" content="YUICHI NOGUCHI">
     <title>YUICHI NOGUCHI - PHOTOGRAPHER</title>
@@ -73,7 +73,7 @@
 		   <li><a href="portfolio.html">Portfolio　　</a></li>
 		   <li><a href="about.html">About　　</a></li>
 		   <li><a href="contact.html">Contact　　</a></li>
-		   <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:8vw;top:80vh;position:fixed;"></a></li>
+		   <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:30px;top:60vh;position:fixed;"></a></li>
 	    	</ul>
 	    </nav>
 	    <div id="nav_wrapper" style="background-image:url(photo/top003.webp);background-position:right 18% center;">
@@ -215,8 +215,6 @@ $('.slide-div').slick({
 	});
        }
 
-    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
-        // タブレット
 
     } else {
         // PC
@@ -236,7 +234,7 @@ $('.slide-div').slick({
       if(b==0){c = a.substr(1,1);
 	$(window).on('load', function() {
             const position = $('#gallery').offset().top;
-            const speed = 200;
+            const speed = 0;
             $("html,body").animate({scrollTop:position},speed);
   	    if(c==0){$("html,body").animate({scrollTop:$("#g0s0").offset().top});};
   	    if(c==1){$("html,body").animate({scrollTop:$("#g1s0").offset().top});};
@@ -297,7 +295,6 @@ $window.trigger('scroll');
 #mobiletitle {
     width: 72vw;
     color: #fff;
-    cursor: pointer;
     margin: 0 auto;
     padding-top:22vh;
 }
@@ -348,7 +345,7 @@ nav#gallery_nav {
     background: #fff;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 823px) {
 .opening nav#global_nav a{background: rgba(0, 0, 0, 0);background-color: #c0c1c6;}
  .type a{color:#fff;margin-right: 8vw;}
  .type a:after{background:#fff;}
@@ -358,6 +355,26 @@ nav#gallery_nav {
   header{height:120px;}
 }
 
+@media all and (max-width: 823px) and (orientation: landscape) {
+    #mobiletitle {
+        width: 36vw;
+        margin-left:22vh;
+    }
+    .type a{
+        top:60vh;
+    }
+    #g-nav ul {
+        transform: translate(-30%,-30%);
+    }
+    #g-nav li a {
+        color: #323232;
+        text-decoration: none;
+        padding: 18px;
+        display: block;
+        letter-spacing: 0.1em;
+        font-size: 20px;
+    }
+}
 
 </style>
 </body>
