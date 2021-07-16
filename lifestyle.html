@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick-lightbox.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/custom_photo.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
 
 
@@ -33,6 +34,7 @@
     <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>    
     <script type="text/javascript" src="js/slick-lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" type="text/javascript"></script>
 
 </head>
 <body style="opacity: 1;">
@@ -77,7 +79,7 @@
         </div>
         </div>
 
-	<div id="sub_content1" style="width: 100vw;height: 120px;position: fixed;z-index: 999;background: #c8cdcd;"></div>
+	<div id="sub_content1" style="width: 100vw;position: fixed;z-index: 999;background: #c8cdcd;"></div>
 
 	<div id="sub_content">
 	<div id="sub_wrapper">
@@ -89,19 +91,16 @@
 	<div id="nav_wrapper">
 		<div class="openbtn active"><span></span><span></span></div>
 
-		<nav id="g-nav" class="panelactive">
-                    <ul>
-		　　    <li><a>Lifestyle</a></li>
-                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:8vw;top:80vh;position:fixed;"></a></li>
-                    </ul>
-		</nav>
+
 		<nav id="g-nav-sub" class="panelactive">
                     <ul id="mpn">
+		　　    <li><a id="category">Lifestyle</a></li>
                         <li><a href="lifestyle.html?sub=0"  ontouchstart>Oahu 01 | Hawaii Style</a></li>
                         <li><a href="lifestyle.html?sub=1"  ontouchstart>Oahu 02 | Hawaii Style</a></li>
                         <li><a href="lifestyle.html?sub=2"  ontouchstart>私がととのう作業場。| キナリノ</a></li>
                         <li><a href="lifestyle.html?sub=3"  ontouchstart>平戸 | DISCOVER JAPAN</a></li>
                         <li><a href="lifestyle.html?sub=4"  ontouchstart>料理上手の器選び</a></li>
+                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" id="insta"></a></li>
                     </ul>
 		</nav>
 	</div>
@@ -143,6 +142,7 @@ nav#gallery_nav .gallery_nav_item {
     opacity: 1;
     margin-bottom: 30px;
 }
+
 #sub_content{
     width: 100vw;
     height: 80px;
@@ -182,7 +182,6 @@ nav#gallery_nav .gallery_nav_item {
 .openbtn span {background-color: #323232;}
 #g-nav ul {top:16%;left: 20%;}
 #mpn li a{font-size:4vw;}
-html,body,header{background:white;}
 #content{
 	background:#c8cdcd;
 	//width:75vw;
@@ -219,9 +218,10 @@ header{padding:0 2vw;}
     background: url(svg/next.svg) no-repeat;
     background-size: 9px;
     top: 50vh;
+    right: -4vw;
 }
 .slick-lightbox .slick-prev {
-    margin-left: 6vw;
+    margin-left: 4vw;
     color: #323232;
     background: url(svg/prev.svg) no-repeat;
     background-size: 9px;
@@ -229,7 +229,7 @@ header{padding:0 2vw;}
 }
 .slick-lightbox-close {
     top: 12vh;
-    right: 10vw;
+    right: 5vw;
     display: block;
     height: 16px;
     width: 16px;
@@ -246,15 +246,17 @@ header{padding:0 2vw;}
     content: '';
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px) and (orientation: portrait) {
+    #sub_content1{height:120px;}
+    #sub_content {z-index: 99999;}
 
-.slick-lightbox .slick-next{
-    top: auto;;
-    background-size: 30%;
+.slick-lightbox .mobile .slick-next{
+    top: auto;
+    background-size: 10px;
 }
-.slick-lightbox .slick-prev {
+.slick-lightbox .mobile .slick-prev {
     top: auto;;
-    background-size: 30%;
+    background-size: 10px;
 }
 
 #gallery {
@@ -289,33 +291,82 @@ div.openbtn.active{
 }
 .openbtn.active span{display:none;}
 
-.slick-prev, .slick-next {
+.mobile .slick-prev,  .mobile .slick-next {
     bottom: 50px;
     height: auto;
     top: auto;
 }
-.slick-lightbox-slick-caption {
+.mobile .slick-lightbox-slick-caption {
     bottom: 55px;
 }
-.slick-lightbox-slick-item {
+.mobile .slick-lightbox-slick-item {
     margin-top: 25px;
 }
-.slick-lightbox-slick-img {
+.mobile. slick-lightbox-slick-img {
     max-width: 90%;
 }
 
-.slick-lightbox-close {
+.mobile .slick-lightbox-close {
     top: 4vh;
     right: 22px;
     display: block;
-    height: 6%;
-    width: 6%;
+    height: 20px;
+    width: 20px;
 }
+    #insta{width:30px;bottom: 13vh;position: fixed;}
+    #g-nav-sub li a#category{font-size: 7vw;letter-spacing: 0.2em;}
+    #g-nav-sub {top: 5%;}
 }
 
 
-@media all and (min-width: 768px) {
+@media all and (max-width: 823px) and (orientation: landscape) {
+    #sub_content1{height:80px;}
+    #sub_content {z-index: 999;}
+    #insta{width:20px;bottom: 8vh;position: fixed;}
+    #g-nav-sub {top: -15px;left: 20%;}
 
+    div.openbtn.active{
+    position: fixed;
+    float: left;
+    left: 30px;
+    top: 30px;
+    opacity: 1;
+    background: url(svg/prev.svg) no-repeat;
+    background-size: 30%;
+    }
+
+    .openbtn.active span{display:none;}
+    #g-nav-sub li a {
+        color: #323232;
+        text-decoration: none;
+        padding: 4% 0;
+        display: block;
+        letter-spacing: 0.1em;
+        font-size: 14px;
+    }
+    #sub_wrapper {
+        margin: 0 15vw;
+	top:20px;
+    }
+    #sub_wrapper ._title0 {
+        font-size:14px;
+        letter-spacing: 0.2em;
+    }
+    #sub_wrapper ._title {
+        font-size:14px;
+        letter-spacing: 0.1em;
+        width: 97%;
+    }
+    .slick-lightbox-slick-caption{
+        margin-top: 5px;
+    }
+
+    #g-nav-sub li a#category{font-size: 26px;letter-spacing: 0.2em;}
+
+    #content{width:98%;}
+}
+@media (max-height: 280px) {
+    #g-nav-sub li a {padding: 1.5vh 0;}
 }
 </style>
 <script>
@@ -394,7 +445,6 @@ $(function () {
 	$("#sub_content").css({"display":"none"});
 	}
         else {
-
 	$("#nav_wrapper").css({"display":"none"});
 	}
 	$("header").css({"visibility":"hidden"});
@@ -420,17 +470,7 @@ $(function () {
     var $nav = $('#nav_wrapper');
 
 
-    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
-        // タブレット
-	$(function() {
-	$('.dropdown').hover(function() {
-	$('#dropdown-menu').slideToggle();
-	}, function() {
-	$('#dropdown-menu').hide();
-	});
-	});
     } else {
-        // PC
 	$("#nav_wrapper").css({"display":"none"});
 	$(".openbtn").css({"display":"none"});
 	$("#sub_content1").css({"display":"none"});

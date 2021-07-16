@@ -35,7 +35,7 @@
 	    <header>
             <div style="display:flex;justify-content: space-between;flex-wrap: wrap;">
             	<div id="maintitle" style="">
-		<a href="index.html"><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;max-width:230px;min-width:200px;padding-top:11%;padding-left:6% ;"></a>
+		<a href="index.html?sub=menu"><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;max-width:230px;min-width:200px;padding-top:11%;padding-left:6% ;"></a>
 
             	<nav id="gallery_nav" style="width:100%;font-size: 16px;padding-left: 1em">
 		<div style="font-size: 24px;line-height:4em;" >Portfolio</div>
@@ -76,14 +76,10 @@
 	<div id="nav_wrapper">
 
 		<div class="openbtn active"><span></span><span></span></div>
-		<nav id="g-nav" class="panelactive">
-                    <ul>
-		　　    <li><a>Portfolio　　</a></li>
-                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:8vw;top:80vh;position:fixed;"></a></li>
-                    </ul>
-		</nav>
+
 		<nav id="g-nav-sub" class="panelactive">
                     <ul id="mpn">
+		　　    <li><a id="category">Portfolio</a></li>
                         <li><a href="landscape.html"  ontouchstart>Landscape</a></li>
                         <li><a href="lifestyle.html"  ontouchstart>Lifestyle</a></li>
                         <li><a href="food.html"  ontouchstart>Food</a></li>
@@ -92,6 +88,25 @@
                         <li><a href="studio.html"  ontouchstart>Studio</a></li>
                         <li><a href="calendar.html"  ontouchstart>Calendar</a></li>
                         <li><a href="still-life.html"  ontouchstart>Still Life</a></li>
+			<li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" id="insta"></a></li>
+                    </ul>
+                    <ul id="mpn0">
+		　　    <li><a id="category">Portfolio</a></li>
+                        <li>　</li>
+                        <li><a href="landscape.html"  ontouchstart>Landscape</a></li>
+                        <li><a href="lifestyle.html"  ontouchstart>Lifestyle</a></li>
+                        <li><a href="food.html"  ontouchstart>Food</a></li>
+                        <li><a href="hotel.html"  ontouchstart>Hotel</a></li>
+                        <li><a href="craft.html"  ontouchstart>Craft</a></li>
+                    </ul>
+                    <ul id="mpn1">
+		　　    <li><a id="category">　</a></li>
+                        <li>　</li>
+                        <li><a href="studio.html"  ontouchstart>Studio</a></li>
+                        <li><a href="calendar.html"  ontouchstart>Calendar</a></li>
+                        <li><a href="still-life.html"  ontouchstart>Still Life</a></li>
+                        <li>　</li>
+			<li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" id="insta"></a></li>
                     </ul>
 		</nav>
 	</div>
@@ -121,18 +136,59 @@ header{padding:0 2vw;}
     float: left;
     z-index: 9999;
     left: 300px;}
-@media all and (max-width: 768px) {
-div.openbtn.active{
+@media all and (max-width: 1024px) and (orientation: portrait) {
+    div.openbtn.active{
+        position: fixed;
+        float: left;
+        left: 4vh;
+        top: 3vh;
+        opacity: 1;
+        background: url(svg/prev.svg) no-repeat;
+        background-size: 30%;
+    }
+    .openbtn.active span{display:none;}
+
+    #insta{width:30px;}
+    #g-nav-sub li a#category{font-size: 7vw;letter-spacing: 0.2em;}
+    #g-nav-sub {top: 5%;}
+    #mpn0,#mpn1{display:none;}
+    .photo img {margin: auto 0;}
+    #mpn li a {font-size: 2vh;}
+}
+@media all and (max-width: 1366px) and (orientation: landscape) {
+    #insta{width:6vh;padding-top:8vh;}
+    #g-nav-sub {top: -5px;left: 0;}
+
+    div.openbtn.active{
     position: fixed;
     float: left;
-    left: 4vh;
-    top: 3vh;
+    left: 30px;
+    top: 30px;
     opacity: 1;
     background: url(svg/prev.svg) no-repeat;
     background-size: 30%;
+    }
+
+    .openbtn.active span{display:none;}
+    #g-nav-sub li a {
+        color: #323232;
+        text-decoration: none;
+        padding: 0 0 5vh 0;
+        display: block;
+        letter-spacing: 0.1em;
+        font-size: 5vh;
+    }
+    #g-nav-sub li a#category{font-size: 8vh;letter-spacing: 0.2em;}
+    #mpn0,#mpn1{
+	display: inline-block;
+	height:  100vh;
+	width: 45%;
+        padding-left: 22vw; 
+	vertical-align: top;
+    }
+    #mpn{display:none;}
 }
-.openbtn.active span{display:none;}
-}
+
 </style>
 <script>
 $(window).on('load',function(){
@@ -208,7 +264,7 @@ $(function () {
     b = 0;
     if(a=="" || a==undefined){a = 0;b = 1;};
     const ua = navigator.userAgent;
-    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
+    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1) || ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
         // スマートフォン
     var $nav = $('#nav_wrapper');
 	$nav.addClass('is-visible');
@@ -218,9 +274,6 @@ $(function () {
 
     $('.openbtn.active').bind('click', function() {
 	window.location.href = 'index.html?sub=menu';});
-
-    } else if (ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
-        // タブレット
 
     } else {
         // PC
