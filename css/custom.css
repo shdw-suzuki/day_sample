@@ -303,7 +303,7 @@ body {
           transform: translateY(0em); }
       #gallery .gallery._group li:nth-child(n+2) {
         display: none; }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 823px) {
     #wrapper {
       width: 100%;
       padding:0;}
@@ -355,9 +355,10 @@ body {
             height: 30vh;
             margin-left: 0%;
             width: 100%; } }
-  @media screen and (max-device-width: 667px) and (orientation: landscape) {
+  @media screen and (max-device-width: 823px) and (orientation: landscape) {
     #gallery .gallery li {
-      height: 40vh; } }
+          height: 60vh;
+    width: 60vh; } }
 
 img {
   -webkit-transition: all 1s ease-in-out;
