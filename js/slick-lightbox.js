@@ -75,7 +75,14 @@
             /* Creates a `slick`-friendly modal. */
             var html, links;
             links = this.createModalItems();
+
+               const ua = navigator.userAgent;
+		if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
+            html = '<div class="slick-lightbox mobile slick-lightbox-hide-init' + (this.isIE ? ' slick-lightbox-ie' : '') + '" style="background: ' + this.options.background + ';">\n  <div class="slick-lightbox-inner">\n    <div class="slick-lightbox-slick slick-caption-' + this.options.captionPosition + '">' + links.join('') + '</div>\n  <div>\n<div>';
+		} else {
+		// PC
             html = '<div class="slick-lightbox slick-lightbox-hide-init' + (this.isIE ? ' slick-lightbox-ie' : '') + '" style="background: ' + this.options.background + ';">\n  <div class="slick-lightbox-inner">\n    <div class="slick-lightbox-slick slick-caption-' + this.options.captionPosition + '">' + links.join('') + '</div>\n  <div>\n<div>';
+		};
             this.$modalElement = $(html);
             this.$parts = {};
             this.$parts['closeButton'] = $(this.options.layouts.closeButton);
@@ -186,8 +193,8 @@
                 });
                 return this.$modalElement.on('click.slickLightbox', '.slick-lightbox-slick-item', function (_this) {
                     return function (e) {
-                        e.preventDefault();
-                        return _this.close();
+                        /* e.preventDefault();
+                        return _this.close(); */
                     };
                 }(this));
             }
