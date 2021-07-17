@@ -289,15 +289,7 @@ overflow-x: hidden;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
-        @media all and (max-width: 168px) {
-          #gallery .gallery._group .gallery_text_wrapper {
-            pointer-events: none; } }
-      @media all and (min-width: 168px) {
-        #gallery .gallery._group:hover {
-          transform: translateY(-0.5em); }
-          #gallery .gallery._group:hover .gallery_text_wrapper {
-            opacity: 0;
-            visibility: hidden; } }
+
       #gallery .gallery._group li {
         width: 100%;
         margin-bottom: 0;
@@ -306,54 +298,7 @@ overflow-x: hidden;
           transform: translateY(0em); }
       #gallery .gallery._group li:nth-child(n+2) {
         display: none; }
-  @media all and (max-width: 168px) {
-    #wrapper {
-      width: 95%;}
-    #gallery {
-      padding-top: 28%;
-      padding-top: 100px; }
-      #gallery .gallery_label {
-        display: none;
-        font-weight: 400;
-        padding-top: .1em;
-        letter-spacing: .2em;
-        text-transform: uppercase;
-        text-align: left;
-        width: 90%;
-        margin-left: 0%;
-        margin-bottom: 1.5em; }
-      #gallery .group_gallery_wrapper {
-        width: 95%;
-        margin-left: 5%;
-        padding-top: 0; }
-      #gallery .gallery {
-        width: 105%;
-        margin-left: 0%;
-        padding-top: 0; }
-        #gallery .gallery.movie li {
-          margin: 0 auto;
-          width: auto;
-          height: auto;
-          padding-left: 5%; }
-          #gallery .gallery.movie li iframe {
-            max-width: 100%;
-            height: auto; }
-        #gallery .gallery.movie .movie_title {
-          padding-top: .5em; }
-        #gallery .gallery li {
-          width: 40%;
-          height: 35vw;
-          margin-left: 0%;margin-right: 10%; }
-        #gallery .gallery._group {
-          width: 100%;
-          height: 30vh;
-          margin-left: 5%; }
-          #gallery .gallery._group .gallery_text_wrapper {
-            width: 95%; }
-          #gallery .gallery._group li {
-            height: 30vh;
-            margin-left: 0%;
-            width: 100%; } }
+
   @media screen and (max-device-width: 667px) and (orientation: landscape) {
     #gallery .gallery li {
       height: 40vh; } }
@@ -381,9 +326,6 @@ img {
     background-size: contain;
     max-width: 1000%; }
 
-  @media all and (max-width: 168px) {
-    #header_logo{
-      width: 300px; } }
 
 nav#global_nav {
   position:fixed;
@@ -481,9 +423,6 @@ letter-spacing: .1em;
     position: absolute;
     top: 70%;
     left: 0; }
-  @media all and (max-width: 168px) {
-    #opening {
-      margin-bottom: 0; } }
 
 #profile_wrapper {
   position: fixed;
@@ -500,10 +439,6 @@ letter-spacing: .1em;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  @media all and (max-width: 168px) {
-    #profile_wrapper {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch; } }
   #profile_wrapper #close_smp {
     display: none;
     text-align: center;
@@ -512,9 +447,6 @@ letter-spacing: .1em;
     width: 30%;
     margin: 0 auto 1em;
     color: black; }
-    @media all and (max-width: 168px) {
-      #profile_wrapper #close_smp {
-        display: block; } }
   #profile_wrapper #profile_close {
     position: absolute;
     top: 15px;
@@ -538,13 +470,6 @@ letter-spacing: .1em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       content: '×'; }
-    @media all and (max-width: 168px) {
-      #profile_wrapper #profile_close {
-        position: fixed;
-        z-index: 1;
-        right: 10px; }
-        #profile_wrapper #profile_close:before {
-          color: white; } }
   #profile_wrapper.is-visible {
     opacity: 1;
     visibility: visible; }
@@ -592,26 +517,6 @@ letter-spacing: .1em;
     #profile_body dl dd {
       padding-left: 40px;
       margin-bottom: .5em; }
-  @media all and (max-width: 168px) {
-    #profile_body {
-      min-width: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      -webkit-transform: translate(0%, 0%);
-      -ms-transform: translate(0%, 0%);
-      transform: translate(0%, 0%);
-      width: 95%;
-      margin: 1em 2.5%; }
-      #profile_body #profile_ja {
-        float: none;
-        width: 100%;
-        padding: 1.5em; }
-      #profile_body #profile_en {
-        float: none;
-        width: 100%;
-        padding: 1.5em;
-        padding-bottom: 0; } }
 
 header {
     width: 100%;
@@ -648,5 +553,8 @@ footer i {
 #opening.sticky {visibility: hidden;}
 #headertitle.sticky {display:none;}
 #maintitle.sticky {display:none;}
-
+@media all and (max-width: 767px) {
+    .slick-lightbox-slick-img {
+    max-width: 80%;
+} }
 
