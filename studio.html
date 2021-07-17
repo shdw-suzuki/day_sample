@@ -389,7 +389,7 @@ $(document).ready(function(){
 
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)) {
-            $("#gallery"+id).slickLightbox({caption:"caption",background:"#c8cdcd"});
+            $("#gallery"+id).slickLightbox({imageMaxHeight:0.75,caption:"caption",background:"#c8cdcd"});
     } else {
         // PC
             $("#gallery"+id).slickLightbox({imageMaxHeight:0.75,caption:"caption"});
