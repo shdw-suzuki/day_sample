@@ -555,6 +555,6 @@ footer i {
 #maintitle.sticky {display:none;}
 @media all and (max-width: 767px) {
     .slick-lightbox-slick-img {
-    max-width: 80%;
+    //max-width: 80%;
 } }
 
