@@ -20,106 +20,374 @@
     <meta property="og:description" content="YUICHI NOGUCHI">
    
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/slick.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/slick-lightbox.css" media="all">
-
-    <link rel="stylesheet" type="text/css" href="css/lity.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/custom.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/scroll.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/custom_photo.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
 
     <script type="text/javascript" src="js/jquery.js"></script>    
     <script type="text/javascript" src="js/jquery.easing.js"></script>    
-    <script type="text/javascript" src="js/slick.min.js"></script>    
-    <script type="text/javascript" src="js/slick-lightbox.js"></script>
     <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>    
-    <script type="text/javascript" src="js/jquery.ofi.min.js"></script>    
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="js/lity.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" type="text/javascript"></script>
 
 </head>
-   
-<body class="opening" style="opacity: 1;">
-    <div id="wrapper">
-        <div id="profile_wrapper" class="is-visible">
-	    <a href="index.html?sub=menu"><div id="profile_close"></div></a>
-            <div id="profile_body">
-                <div id="profile_ja">
-                    <div class="name">■■　■■</div>
-                    
-                    <div class="sub_header">略歴</div>
-                    <dl>
-                        <dt>1980</dt><dd>■■■■■■■■■■■■</dd>
-                        <dt>2004</dt><dd>■■■■■■■■■■■■</dd>
-                        <dt>2005</dt><dd>■■■■■■■■■■■■</dd>
-                        <dt>2009</dt><dd>■■■■■■■■■■■■</dd>
-                    </dl>
+<body style="opacity: 1;">
+	    <header>
+            <div style="display:flex;justify-content: space-between;flex-wrap: wrap;">
+            	<div id="maintitle" style="">
+		<a href="index.html?sub=menu"><img src="svg/maintitle.svg" alt="YUICHI NOGUCHI" style="width:20vw;max-width:230px;min-width:200px;padding-top:11%;padding-left:6% ;"></a>
 
-                    <div class="sub_header">受賞歴</div>
-                    <dl>
-                        <dt>2003</dt><dd>■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2006</dt><dd>■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2016</dt><dd>■■■■■■■■■■■■■■■■■■■■</dd>
-                    </dl>
+            	<nav id="gallery_nav" style="width:100%;font-size: 16px;padding-left: 1em">
+		<div style="font-size: 24px;line-height:4em;" >About</div>
 
-                    <div class="sub_header">個展</div>
-                    <dl>
-                        <dt>2005</dt><dd>■■■■■■■■■■</dd>
-                    </dl>
 
-                    <div class="sub_header">グループ展</div>
-                    <dl>
-                        <dt>2003</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2006</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2006</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2007</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2009</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2012</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                        <dt>2014</dt><dd>■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</dd>
-                    </dl>                    
-                </div>
-                <div id="profile_en">
-                    <div class="name">YUICHI NOGUCHI</div>
+		<div style="font-size: 9px;position: fixed;bottom: 0;padding-bottom: 3%;">&#169; Yuichi Noguchi all rights reserved.</div>
+            	</nav>
 
-                    <div class="sub_header">CV</div>
-                    <dl>
-                        <dt>1980</dt><dd>▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2004</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2005</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2009</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                    </dl>
 
-                    <div class="sub_header">AWARDS</div>
-                    <dl>
-                        <dt>2003</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2006</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2016</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                    </dl>
+		</div>
 
-                    <div class="sub_header">SOLO EXHIBITIONS</div>
-                    <dl>
-                        <dt>2005</dt><dd>▽▽▽▽▽▽▽▽▽▽▽</dd>
-                    </dl>
-
-                    <div class="sub_header">SELECTED GROUP EXHIBITIONS</div>
-                    <dl>
-                        <dt>2003</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2006</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2006</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2007</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2009</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2012</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                        <dt>2014</dt><dd>▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽</dd>
-                    </dl>
-                </div>
-                <div id="close_smp">close</div>
             </div>
+	    </header>
+        <div id="wrapper">
+        <section id="opening" style="display:none;">
+
+        </section>
+        <div id="content">
+            	<nav id="global_nav" style="top:25px;">
+                    <ul>
+		　　    <li><a href="portfolio.html">Portfolio　　</a></li>
+                        <li><a href="about.html" style="color:#323232;">About　　</a></li>
+                        <li><a href="contact.html">Contact　　</a></li>
+
+                        <li><a href="https://www.instagram.com/hawaiiscapephotography/"><img src="svg/instaicon.svg" alt="Instagram" style="width:2vw;max-width: 20px"></a></li>
+                    </ul>
+            	</nav>
+                <div id="profile_body">
+
+			<div class="name"><span style="font-size:16px;">野口裕一</span><br>Yuichi Noguchin</div>
+
+
+                    <dl>
+                        <dt>1979</dt><dd>熊本県生まれ</dd>
+                        <dt>2003</dt><dd>日本大学芸術学部写真学科卒業</dd>
+                        <dt>    </dt><dd>出版社へ入社</dd>
+                        <dt>2021</dt><dd>フリーランスとして独立</dd>
+                    </dl>
+                    <dl>
+                        <dt>1979</dt><dd>Born in Kumamoto Japan</dd>
+                        <dt>2003</dt><dd>Graduated from Nihon University College of Art</dd>
+                        <dt>    </dt><dd>Worked at Publishing Company in Tokyo</dd>
+                        <dt>2021</dt><dd>Started as a freelance photographer</dd>
+                    </div>
+
+		</div>
         </div>
-      </div>
-    </div>
+        </div>
+	<div id="nav_wrapper">
+
+		<div class="openbtn"><span></span><span></span></div>
+
+		<nav id="g-nav-sub" class="panelactive">
+                    <ul id="mpn">
+		　　    <li><a id="category">About</a></li>
+                	<li><div id="profile_mpn">
+
+			    <div class="name"><span style="font-size:16px;">野口裕一</span><br>Yuichi Noguchin</div>
+
+
+                            <dl>
+                                <dt>1979</dt><dd>熊本県生まれ</dd>
+                                <dt>2003</dt><dd>日本大学芸術学部写真学科卒業</dd>
+                                <dt>　</dt><dd>出版社へ入社</dd>
+                                <dt>2021</dt><dd>フリーランスとして独立</dd>
+                            </dl>
+                            <dl>
+                                <dt>1979</dt><dd>Born in Kumamoto Japan</dd>
+                                <dt>2003</dt><dd>Graduated from Nihon University College of Art</dd>
+                                <dt>　</dt><dd>Worked at Publishing Company in Tokyo</dd>
+                                <dt>2021</dt><dd>Started as a freelance photographer</dd>
+                           </dl>
+
+		           </div>
+			</li>
+
+                    </ul>
+                    <ul id="mpn0">
+		　　    <li><a id="category">About</a></li>
+                        <li><div id="profile_mpn">
+
+			    <div class="name"><span style="font-size:16px;">野口裕一</span><br>Yuichi Noguchin</div>
+
+
+                            <dl>
+                                <dt>1979</dt><dd>熊本県生まれ</dd>
+                                <dt>2003</dt><dd>日本大学芸術学部写真学科卒業</dd>
+                                <dt>　</dt><dd>出版社へ入社</dd>
+                                <dt>2021</dt><dd>フリーランスとして独立</dd>
+                            </dl>
+
+			</div></li>
+                    </ul>
+                    <ul id="mpn1">
+		　　    <li><a id="category">　</a></li>
+                	<li><div id="profile_mpn">
+
+			<div class="name"><span style="font-size:16px;">　</span><br>　</div>
+                    <dl>
+                        <dt>1979</dt><dd>Born in Kumamoto Japan</dd>
+                        <dt>2003</dt><dd>Graduated from Nihon University College of Art</dd>
+                        <dt>　</dt><dd>Worked at Publishing Company in Tokyo</dd>
+                        <dt>2021</dt><dd>Started as a freelance photographer</dd>
+                    </dl>
+
+			</div></li>
+                    </ul>
+
+		<ul><div style="font-size: 12px;position: fixed;bottom: 0;padding-bottom: 3%;" id="mpn2">&#169; Yuichi Noguchi all rights reserved.</div></ul>
+		</nav>
+	</div>
 </body>
+<style>
+#profile_mpn{
+    position: fixed;
+    color: #323232;
+    width: 55%;
+    min-width: 650px;
+    line-height: 2em;
+}
+#profile_mpn dl dt {
+    clear: both;
+    float: left;
+    font-size: 14px;
+    width: 50px;
+}
+#profile_mpn dl {
+    margin-bottom: 3em;
+}
+#profile_mpn .name {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+#g-nav ul {top:16%;}
+#mpn li a{font-size:5vw;}
+#content{
+	background:#c8cdcd;
+	//width:75vw;
+	//height:100vh;
+	right: 0;
+	z-index:9999;
+}
+.photo img{
+	max-height:60vh;
+        max-width:80%;
+   position: absolute;          /* 位置指定 */
+   top:  0;                     /* 位置指定 */
+   bottom:  0;                  /* 位置指定 */
+   left:  0;                    /* 位置指定 */
+   right:  0;                   /* 位置指定 */
+   margin:  auto;               /* 中央寄せ */
+}
+header{padding:0 2vw;}
+#wrapper{width: 70%;
+    float: left;
+    z-index: 9999;
+    left: 300px;}
+@media all and (max-width: 1024px) and (orientation: portrait) {
+    div.openbtn.active{
+        position: fixed;
+        float: left;
+        left: 4vh;
+        top: 3vh;
+        opacity: 1;
+        background: url(svg/prev.svg) no-repeat;
+        background-size: 30%;
+    }
+    .openbtn.active span{display:none;}
+
+    #insta{width:30px;}
+    #g-nav-sub li a#category{font-size: 7vw;letter-spacing: 0.2em;}
+    #g-nav-sub {top: 5%;}
+    #mpn0,#mpn1{display:none;}
+    .photo img {margin: auto 0;}
+    #mpn li a {font-size: 2vh;}
+}
+@media all and (max-width: 1366px) and (orientation: landscape) {
+    #insta{width:6vh;padding-top:8vh;}
+    #g-nav-sub {top: 8px;left: 0;}
+
+    div.openbtn.active{
+    position: fixed;
+    float: left;
+    left: 30px;
+    top: 30px;
+    opacity: 1;
+    background: url(svg/prev.svg) no-repeat;
+    background-size: 30%;
+    }
+
+    .openbtn.active span{display:none;}
+    #g-nav-sub li a {
+        color: #323232;
+        text-decoration: none;
+        padding: 0 0 5vh 0;
+        display: block;
+        letter-spacing: 0.1em;
+        font-size: 5vh;
+    }
+    #g-nav-sub li a#category{font-size: 8vh;letter-spacing: 0.2em;}
+    #mpn0,#mpn1{
+	display: inline-block;
+	height:  100vh;
+	//width: 45%;
+        margin: 0 9vw; 
+	vertical-align: top;
+    }
+    #mpn{display:none;}
+#profile_mpn .name {
+    margin-top: 1em;
+}
+#profile_mpn .name {
+    margin-bottom: 1em;
+}
+#profile_mpn dl dt {
+    font-size: 10px;
+}
+dl, dt, dd {
+    font-size: 10px;
+}
+#mpn2 {
+padding-left: 8%;
+}
+}
+
+@media all and (max-width: 320px) {
+#profile_mpn dl dt {
+    font-size: 10px;
+}
+dl, dt, dd {
+    font-size: 10px;
+}
+}
+.openbtn span {
+    background-color: #323232;
+}
+</style>
+<script>
+$(window).on('load',function(){
+  $('#gn_0').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/LANDSCAPE/ESTONIA/000.webp');
+    $("#gn_0").css('color','#323232');
+  });
+  $('#gn_1').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/LIFESTYLE/Oahu 01 _ Hawaii Style/000.webp');
+  });
+  $('#gn_2').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/FOOD/ON%20THE%20DISH/000.webp');
+  });
+  $('#gn_3').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/HOTEL/Tokyo%20Lifestyle%20Hotel/000.webp');
+  });
+  $('#gn_4').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/CRAFT/KIMURA LAUHARA SHOP _ HAWAII/000.webp');
+  });
+  $('#gn_5').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/STUDIO/RERIC/000.webp');
+  });
+  $('#gn_6').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/CALENDAR/HAWAII%20CALENDAR2021/000.webp');
+  });
+  $('#gn_7').on('mouseover', function(){
+    $('.photo').children('img').attr('src', 'photo/STILLLIFE/STILLLIFE/000.webp');
+  });
+
+  $('#gn_0').on('click', function(){
+    window.location.href = "landscape.html"
+  });
+  $('#gn_1').on('click', function(){
+    window.location.href = "lifestyle.html"
+  });
+  $('#gn_2').on('click', function(){
+    window.location.href = "food.html"
+  });
+  $('#gn_3').on('click', function(){
+    window.location.href = "hotel.html"
+  });
+  $('#gn_4').on('click', function(){
+    window.location.href = "craft.html"
+  });
+  $('#gn_5').on('click', function(){
+    window.location.href = "studio.html"
+  });
+  $('#gn_6').on('click', function(){
+    window.location.href = "calendar.html"
+  });
+  $('#gn_7').on('click', function(){
+    window.location.href = "still-life.html"
+  });
+
+    $('#gallery_nav .gallery_title').mouseenter(function() {
+        var myID = $(this).attr("id");
+        //ナビアイテムのアクティブ化
+        var $navItem = $("#gallery_nav").find('.gallery_title');
+        $navItem.css('color','#969696');
+        $(this).css('color','#323232');
+
+    });
+});
+
+$(function () {
+    var urlPrm = new Object;
+    var urlSearch = location.search.substring(1).split('&');
+    for(i=0;urlSearch[i];i++) {
+        var kv = urlSearch[i].split('=');
+        urlPrm[kv[0]]=kv[1];
+    }
+    a = urlPrm.id;
+    b = 0;
+    if(a=="" || a==undefined){a = 0;b = 1;};
+    const ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1) || ua.indexOf('iPad') > -1 || ua.indexOf('Android') > -1) {
+        // スマートフォン
+    var $nav = $('#nav_wrapper');
+	$nav.addClass('is-visible');
+	$("header").css({"visibility":"hidden"});
+	$("header").css({"display":"none"});
+	$("#wrapper").css({"display":"none"});
+
+    $('.openbtn').bind('click', function() {
+	window.location.href = 'index.html?sub=menu';});
+
+    } else {
+        // PC
+	$("#nav_wrapper").css({"display":"none"});
+	$(".openbtn").css({"display":"none"});
+
+	if(a==0 || b==1){$('.photo').children('img').attr('src', 'photo/LANDSCAPE/ESTONIA/000.webp');$("#gn_0").css('color','#323232');}
+	if(a==1){$('.photo').children('img').attr('src', 'photo/LIFESTYLE/Oahu 01 _ Hawaii Style/000.webp');$("#gn_1").css('color','#323232');}
+	if(a==2){$('.photo').children('img').attr('src', 'photo/FOOD/ON%20THE%20DISH/000.webp');$("#gn_2").css('color','#323232');}
+	if(a==3){$('.photo').children('img').attr('src', 'photo/HOTEL/Tokyo%20Lifestyle%20Hotel/000.webp');$("#gn_3").css('color','#323232');}
+	if(a==4){$('.photo').children('img').attr('src', 'photo/CRAFT/KIMURA LAUHARA SHOP _ HAWAII/000.webp');$("#gn_4").css('color','#323232');}
+	if(a==5){$('.photo').children('img').attr('src', 'photo/STUDIO/RERIC/000.webp');$("#gn_5").css('color','#323232');}
+	if(a==6){$('.photo').children('img').attr('src', 'photo/CALENDAR/HAWAII%20CALENDAR2021/000.webp');$("#gn_6").css('color','#323232');}
+	if(a==7){$('.photo').children('img').attr('src', 'photo/STILLLIFE/STILLLIFE/000.webp');$("#gn_7").css('color','#323232');}
+
+    };
+});
+
+	$(".openbtn").click(function () {//ボタンがクリックされたら
+    	    $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    	    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+    	    $('.openbtn').children('span').css("background-color","");
+    	    $("#link02").toggleClass('active');
+	});
+
+	$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    	    $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+    	    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+    	    $("#link02").removeClass('active');
+	});
+</script>
 </html>
