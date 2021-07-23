@@ -475,14 +475,12 @@ letter-spacing: .1em;
     visibility: visible; }
 
 #profile_body {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 44%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   color: black;
-  background: #c0c1c6;
   width: 55%;
   min-width: 650px;
   font-weight: 400; }
@@ -499,8 +497,8 @@ letter-spacing: .1em;
     padding: 50px;
     padding-left: 0; }
   #profile_body .name {
-    margin-bottom: 2em;
-    font-size: 1.1em;
+    margin-bottom: 5em;
+    font-size: 14px;
     letter-spacing: .05em; }
   #profile_body .sub_header {
     margin-bottom: .5em;
@@ -509,13 +507,15 @@ letter-spacing: .1em;
     border-bottom: thin solid black;
     letter-spacing: .05em; }
   #profile_body dl {
-    margin-bottom: 2em; }
+    margin-bottom: 5em; }
     #profile_body dl dt {
       clear: both;
       float: left;
+    font-size: 14px;
       width: 40px; }
     #profile_body dl dd {
-      padding-left: 40px;
+      padding-left: 60px;
+    font-size: 14px;
       margin-bottom: .5em; }
 
 header {
